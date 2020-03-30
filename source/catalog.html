@@ -30,13 +30,14 @@
 
     <main class="catalog-main">
       <h1>Каталог товаров</h1>
-      <h2 class="visually-hidden">Каталог товаров</h2>
 
       <section class="catalog">
         <ul class="catalog__list info-catalog">
           <li class="info-catalog__item catalog__item-rabbit">
-            <img class="catalog__item-image" src="#" width="260" height="195" alt="Фото поделки: Зайчик-попрыгайчик">
-            <h2 class="catalog__item-name">Зайчик-попрыгайчик</h2>
+            <a href="">
+              <img class="catalog__item-image" src="#" width="260" height="195" alt="Фото поделки: Зайчик-попрыгайчик">
+              <h2 class="catalog__item-name">Зайчик-попрыгайчик</h2>
+            </a>
             <p class="catalog__item-characteristic">Рост 30 см, вес 200 г</p>
             <p class="catalog__item-buy">
               <span class="catalog__cost">1200 руб.</span>
@@ -44,8 +45,10 @@
             </p>
           </li>
           <li class="info-catalog__item catalog__item-linen">
-            <img class="catalog__item-image" src="#" width="260" height="195" alt="Корзинка для белья">
-            <h2 class="catalog__item-name">Корзинка для белья</h2>
+            <a href="">
+              <img class="catalog__item-image" src="#" width="260" height="195" alt="Корзинка для белья">
+              <h2 class="catalog__item-name">Корзинка для белья</h2>
+            </a>
             <p class="catalog__item-characteristic">Диаметр 15 см, высота 10 см</p>
             <p class="catalog__item-buy">
               <span class="catalog__cost">690 руб.</span>
@@ -53,8 +56,10 @@
             </p>
           </li>
           <li class="info-catalog__item catalog__item-toys">
-            <img class="catalog__item-image" src="#" width="260" height="195" alt="Фото поделки: Большая корзинка для игрушек">
-            <h2 class="catalog__item-name">Большая корзинка для игрушек</h2>
+            <a href="">
+              <img class="catalog__item-image" src="#" width="260" height="195" alt="Фото поделки: Большая корзинка для игрушек">
+              <h2 class="catalog__item-name">Большая корзинка для игрушек</h2>
+            </a>
             <p class="catalog__item-characteristic">Диаметр 30 см, высота 30 см</p>
             <p class="catalog__item-buy">
               <span class="catalog__cost">1500 руб.</span>
@@ -77,23 +82,21 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Instagram</a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Instagram</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Twitter</a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Twitter</span></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <strong class="copyright__text">Разработано:</strong>
         <a class="button copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive">HTMLacademy</a>
-      </div>
     </footer>
 
   </body>
