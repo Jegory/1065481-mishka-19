@@ -7,12 +7,7 @@
   font-weight: bold;
   line-height: 1.11;
   text-align: center;
-}
-
-.catalog__item-name {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 1.41;
+  background: @grey-light;
 }
 
 .catalog__item-characteristic {
@@ -20,6 +15,30 @@
   line-height: 2.31;
   text-align: left;
   color: @grey-dark;
+}
+
+.catalog__item-buy {
+  display: flex;
+  justify-content: space-around;
+}
+
+.catalog__item-name {
+  display: block;
+  margin: 31px auto 17px 29px;
+  padding: 0;
+  color: @black;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  text-align: left;
+
+  &:hover {
+    color: @black-hover;
+  }
+
+  &:active {
+    color: @black-active;
+  }
 }
 
 .catalog__cost {

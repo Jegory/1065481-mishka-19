@@ -12,7 +12,7 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
       </a>
       <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><img class="page-header__hamburger" src="img/icon-menu-open.svg" width="20" height="14" alt="Открыть меню"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -22,7 +22,9 @@
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="main-nav__item list__item--search">
-              <a class="main-nav__link" href="#">Поиск по сайту</a>
+              <a class="main-nav__link" href="#">
+                <img src="img/icon-search.svg" width="18" height="18">Поиск по сайту
+              </a>
             </li>
               <!-- <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="post">
                 <input class="main-nav__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
@@ -30,7 +32,9 @@
                 <button class="visually-hidden" type="submit"></button>
               </form> -->
             <li class="main-nav__item list__item--basket">
-              <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+              <a class="main-nav__link" href="#">
+                <img src="img/icon-cart.svg" width="21" height="18">Корзина: пока пуста
+              </a>
             </li>
           </ul>
         </div>
@@ -43,33 +47,55 @@
         <h1 class="catalog__title">Каталог товаров</h1>
         <div class="catalog__wrapper">
           <ul class="catalog__list info-catalog">
+
             <li class="info-catalog__item catalog__item-rabbit">
-              <a href="first.html"><img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Зайчик-попрыгайчик"></a>
-              <a href="second.html"><h2 class="catalog__item-name">Зайчик-попрыгайчик</h2></a>
+              <a href="first.html">
+                <img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Зайчик-попрыгайчик">
+              </a>
+              <a class="catalog__item-name" href="first.html">
+                Зайчик-попрыгайчик
+              </a>
               <p class="catalog__item-characteristic">Рост 30 см, вес 200 г</p>
               <div class="catalog__item-buy">
                 <span class="catalog__cost">1200 руб.</span>
-                <a class="catalog__icon--basket" href="#"></a>
+                <a class="catalog__icon--basket" href="#">
+                  <img src="img/icon-cart.svg" width="20" height="19">
+                </a>
               </div>
             </li>
+
             <li class="info-catalog__item catalog__item-linen">
-              <a href="first.html"><img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"></a>
-              <a href="second.html"><h2 class="catalog__item-name">Корзинка для белья</h2></a>
+              <a href="second.html">
+                <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+              </a>
+              <a class="catalog__item-name" href="second.html">
+                Корзинка для белья
+              </a>
               <p class="catalog__item-characteristic">Диаметр 15 см, высота 10 см</p>
               <div class="catalog__item-buy">
                 <span class="catalog__cost">690 руб.</span>
-                <a class="catalog__icon--basket" href="#"></a>
+                <a class="catalog__icon--basket" href="#">
+                  <img src="img/icon-cart.svg" width="20" height="19">
+                </a>
               </div>
             </li>
+
             <li class="info-catalog__item catalog__item-toys">
-              <a href="first.html"><img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Большая корзинка для игрушек"></a>
-              <a href="second.html"><h2 class="catalog__item-name">Большая корзинка для игрушек</h2></a>
+              <a href="third.html">
+                <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Большая корзинка для игрушек">
+              </a>
+              <a class="catalog__item-name" href="third.html">
+                Большая корзинка для игрушек
+              </a>
               <p class="catalog__item-characteristic">Диаметр 30 см, высота 30 см</p>
               <div class="catalog__item-buy">
                 <span class="catalog__cost">1500 руб.</span>
-                <a class="catalog__icon--basket" href="#"></a>
+                <a class="catalog__icon--basket" href="#">
+                  <img src="img/icon-cart.svg" width="20" height="19">
+                </a>
               </div>
             </li>
+
           </ul>
         </div>
       </section>
