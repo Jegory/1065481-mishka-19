@@ -1,0 +1,49 @@
+.catalog {
+  border: 1px solid green;
+}
+
+.catalog__title {
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-align: center;
+  background: @grey-light;
+}
+
+.catalog__item-characteristic {
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: left;
+  color: @grey-dark;
+}
+
+.catalog__item-buy {
+  display: flex;
+  justify-content: space-around;
+}
+
+.catalog__item-name {
+  display: block;
+  margin: 31px auto 17px 29px;
+  padding: 0;
+  color: @black;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  text-align: left;
+
+  &:hover {
+    color: @black-hover;
+  }
+
+  &:active {
+    color: @black-active;
+  }
+}
+
+.catalog__cost {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: left;
+}

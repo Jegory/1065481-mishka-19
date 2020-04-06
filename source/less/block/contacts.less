@@ -1,0 +1,51 @@
+.contacts {
+  background-color: @white;
+  padding: 40px 30px;
+  border: 1px solid green;
+}
+
+.contacts__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.67;
+  text-align: left;
+}
+
+.contacts__map-image {
+  height: auto;
+  width: 100%;
+}
+
+.info-list__mail,
+.info-list__address {
+  font-size: 15px;
+  line-height: 2;
+  text-align: left;
+  color: @grey-dark;
+}
+
+.contacts__write-link {
+  display: flex;
+  width: 260px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px @grey-dark;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  text-align: center;
+  color: @grey-dark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: @white;
+    background-color: @grey-dark;
+  }
+
+  &:active {
+    color: @white-down;
+    background-color: @grey-dark;
+  }
+}

@@ -1,0 +1,40 @@
+.production {
+  border: 1px solid green;
+}
+
+.production__title {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  text-align: left;
+}
+
+.production__text {
+  font-size: 13px;
+  line-height: 1.85;
+  text-align: left;
+}
+
+.production__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 192px;
+  height: 52px;
+  text-decoration: none;
+  border: solid 2px @grey-dark;
+  line-height: 1.18;
+  color: @grey-dark;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:hover {
+    color: @white;
+    background-color: @grey-dark;
+  }
+
+  &:active {
+    color: @white-down;
+    background-color: @grey-dark;
+  }
+}
