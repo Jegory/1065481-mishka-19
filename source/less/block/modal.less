@@ -1,4 +1,16 @@
 .modal {
+  max-width: 320px;
+  height: 336px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid red;
+}
+
+.modal__wrapper {
+  margin: 0 30px;
+}
+
+.modal {
   border: 1px solid green;
 }
 
@@ -7,6 +19,8 @@
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
+  text-transform: uppercase;
+  color: @grey-dark;
 }
 
 .basket-form__legend {
@@ -18,5 +32,19 @@
 .modal__button {
   width: 260px;
   height: 52px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:@white;
   background-color: #63d1bb;
+  margin-top: 30px;
+}
+
+fieldset {
+   border:0 none;
+}
+
+.basket-form__radio {
+  width: 82px;
+  height: 52px;
+  border: 1px solid @grey-dark;
 }

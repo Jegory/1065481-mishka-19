@@ -1,0 +1,378 @@
+.form__radio-label,
+.form__checkbox-label,
+.form__text-label {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.06;
+  text-align: left;
+  color: @black;
+}
+
+.form__text,
+.form__tel,
+.form__mail {
+  width: 233px;
+  height: 36px;
+  font-size: 17px;
+  line-height: 1.06;
+  text-align: left;
+  color: @grey-range-text;
+  border-bottom: 2px solid #000000; // заливка бордера инпута
+}
+
+.form__textarea {
+  border: 2px solid #000000;  // заливка бордер текстеареа
+}
+
+.form__text {
+  width: 258px;
+}
+
+.form__legend {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 0.94;
+  text-align: left;
+  color: @green-input;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.form__item {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.form__fillers {
+  display: flex;
+  align-items: baseline;
+}
+
+.form__fillers-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input {
+  border: none;
+  padding: 25px 1px;
+}
+
+label {
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.form-box {
+  margin-bottom: 5px;
+}
+
+.form-order__title {
+  padding: 71px 0 76px 0;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-align: center;
+  color: @black;
+  background: @grey-light;
+  outline: 1px solid tomato;
+}
+
+.form-order__text {
+  font-size: 13px;
+  line-height: 1.85;
+  text-align: left;
+  color: @grey-dark;
+  margin: 30px 0 20px 0;
+}
+
+.form__text-label {
+  margin: 15px 0 0 0;
+}
+
+.form-order__radio {
+  outline: 1px solid tomato;
+}
+
+.form-order__checkbox {
+  outline: 1px solid tomato;
+}
+
+.form-order__name {
+  outline: 1px solid tomato;
+}
+
+.form__phone-container {
+  display: flex;
+}
+
+.form__icon-phone {
+  border-bottom: 2px solid #000000;  // бордер под иконкой
+}
+
+.form__info {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: left;
+  color: @grey-dark;
+}
+
+.form__submit {         // кнопка
+  margin: 20px 0 55px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 52px;
+  border: solid 2px @grey-dark;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  text-align: center;
+  color: @grey-dark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: @white;
+    background-color: @grey-dark;
+  }
+
+  &:active {
+    color: @white-down;
+    background-color: @grey-dark;
+  }
+}
+
+.form__phone-container { // цвет иконки
+  fill: #cccccc;
+}
+
+.form__phone-container:hover .form__icon-phone,
+.form__phone-container:focus .form__icon-phone { // цвет иконки при наведении
+  fill: @green-range;
+  border-color: @green-range;
+}
+
+.form__tel:hover,
+.form__mail:hover,
+.form__text:hover {     //  бордер цвет при наведении
+  border-color: @green-range;
+}
+
+.form__textarea:hover {
+  border-color: @green-range;  // заливка бордер текстеареа
+}
+
+input:focus {    // цвет текста активного инпута
+color: @grey-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .form-order__title {
+    height: 226px;
+    font-size: 43px;
+    line-height: 1.16;
+    padding-top: 104px;
+  }
+
+  .page-header__text {
+    position: absolute;
+    left: 100px;
+  }
+
+   .form-order__text {
+    width: 612px;
+    font-size: 17px;
+    line-height: 1.76;
+    margin: 80px 0 60px 51px;
+  }
+
+  .form-order__form {
+    display: flex;
+  }
+
+
+.form__tel,
+.form__mail {
+  background: #F2F2F2;
+}
+
+  .form__radio-label,
+  .form__checkbox-label,
+  .form__text-label {
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  .form-order__radio {
+    height: 130px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .form-order__checkbox {
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #F2F2F2;
+  }
+
+  .form-order__name {
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-order__phone {
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F2F2F2;
+    outline: 1px solid tomato;
+  }
+
+  .form-order__textarea {
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid tomato;
+  }
+
+  .form__textarea {
+    width: 501px;
+    height: 142px;
+  }
+
+  .form-order__required {
+    height: 155px;
+    width: 768px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: row;
+    outline: 1px solid tomato;
+  }
+
+  .form__info {
+    order: 2;
+    margin: auto 0;
+  }
+
+  .form__submit {
+    width: 230px;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__tel,
+  .form__mail {
+    width: 670px;
+ }
+
+  .form__text {
+    width: 573px;
+  }
+
+  .form__text-desktop {
+    width: 626px;
+  }
+
+  .form-order__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .form-order__text {
+    width: 672px;
+    margin: 60px auto;
+  }
+
+  .form-order__checkbox {
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #F2F2F2;
+  }
+
+  .form__list-checkbox {
+    height: 228px;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #F2F2F2;
+  }
+
+  .form__fillers-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
+
+  .form__list-name {
+    height: 304px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form__fillers-name {
+    height: 304px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+  }
+
+  .form__fillers-phone {
+
+  }
+
+  .form__textarea {
+    width: 700px;
+    height: 142px;
+  }
+
+  .form-order__required {
+    width: 1150px;
+    display: flex;
+  }
+
+
+}

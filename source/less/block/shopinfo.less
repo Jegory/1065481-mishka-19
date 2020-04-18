@@ -1,13 +1,15 @@
 
 .shopinfo {
-  background-color: @white;
-  margin: 0;
-  padding: 30px;
-  border: 1px solid green;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.shopinfo__wrapper {
+  margin: 0 30px;
 }
 
 .shopinfo__title {
-  padding: 0;
+  padding: 34px 0 5px 30px;
   margin: 0;
   font-size: 25px;
   font-weight: bold;
@@ -22,9 +24,105 @@
 }
 
 .shopinfo__item {
+  display: block;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.18;
   text-align: left;
   color: @black;
+}
+
+.shopinfo__icon-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  margin: 5px 0 0 8px;
+}
+
+.shopinfo__icon {
+  display: block;
+  fill: @green-input;
+}
+
+@media (min-width: @tablet-width) {
+  .shopinfo {
+    max-width: 770px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .shopinfo__wrapper {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .shopinfo__title {
+    font-size: 43px;
+    font-weight: bold;
+    line-height: 1.16;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .shopinfo__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // width: 770px;
+    margin: 0 auto;
+    padding-left: 22px;
+  }
+
+  .shopinfo__item {
+    width: 295px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .shopinfo__item-money {
+    order: 3;
+  }
+
+  .shopinfo__item-heart {
+    order: 5;
+  }
+
+  .shopinfo__item-rocket {
+    order: 4;
+  }
+
+  .shopinfo__item-gift {
+    order: 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .shopinfo {
+    width: auto;
+    margin: 0;
+  }
+
+  .shopinfo__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 1050px;
+    margin: 0 50px;
+    padding: 0 100px;
+    border: 1px solid red;
+  }
+
+  .shopinfo__title {
+    margin-left: 200px;
+  }
+
+  .shopinfo__item {
+    width: 295px;
+    margin-bottom: 30px;
+
+  }
 }

@@ -1,16 +1,33 @@
 .page-footer {
-  overflow: hidden;
-  background-color: @grey-light;
-  margin: 0;
-  padding: 0;
-  border: 1px solid red;
+  display: flex;
+  max-width: 320px;
+  margin: 0 auto;
+  flex-direction: column;
   height: 160px;
+  background-color: @grey-light;
 }
 
-.page-footer__social {
-  height: 50%;
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 143px;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
-.page-footer__copyright {
-  height: 50%;
+@media (min-width: @desktop-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 143px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

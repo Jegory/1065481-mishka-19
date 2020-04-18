@@ -1,0 +1,202 @@
+.production-video {
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 503px;
+}
+
+.production-video-wrapper {
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  // min-height: 745px;
+}
+
+.production-video__header-box {
+  display: flex;
+  margin-left: 33px;
+}
+
+.production-video__camera-icon { // иконка камеры
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.production-video__title {
+  width: 126px;
+  font-size: 17px;
+  line-height: 1.41;
+  text-align: left;
+  margin-right: 43px;
+  padding-top: 3px;
+}
+
+.production-video__image-container { // застаква видео
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.production-video__header-box {
+  order: -1;
+  }
+
+.production-video__play-button { // кнопка на видео
+  position: absolute;
+  background: none;
+  border: none;
+
+  &:active {
+    size: 120%;
+  }
+
+  &:active,
+  &:hover {
+    size: 80%;
+  }
+}
+
+.production-video__text {
+  width: 183px;
+  margin: 27px 33px 25px 33px;
+  font-size: 13px;
+  line-height: 1.85;
+  text-align: left;
+  color: @grey-dark;
+}
+
+.production__link {
+  margin: 0 34px;
+}
+
+.production-video__bg-tablet,
+.production-video__bg-desktop { // скрываем заставку видео с моб версии
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .production-video {
+    width: 770px;
+    max-width: 770px;
+    min-height: 745px;
+    margin: 0 auto;
+    margin-top: 53px;
+    margin-bottom: 63px;
+  }
+
+  .production-video-wrapper {
+    border: 1px solid #ececec;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .production-video__bg-tablet { // отображаем заставку для планшетной версии
+     display: block;
+  }
+
+  .production-video__bg-image,
+  .production-video__bg-desktop { // скрываем заставку видео для моб версии
+    display: none;
+  }
+
+  .production-video__image-container { // меняем расположение флекс блоков
+    order: -1;
+  }
+
+  .production-video__camera-icon {
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .production-video__title {
+    width: 400px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .production-video__text {
+    width: 585px;
+    font-size: 15px;
+    line-height: 2;
+    margin-left: 42px;
+  }
+
+  .production__link {
+    width: 584px;
+    height: 52px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production-video {
+    width: 1150px;
+    max-width: 1150px;
+    min-height: 455px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+
+  .production-video-wrapper {
+    border: 1px solid #ececec;
+    display: flex;
+    flex-direction: row;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .production-video__bg-desktop {
+    display: block;
+  }
+
+  .production-video__bg-image,
+  .production-video__bg-tablet {
+    display: none;
+  }
+
+  .production-video__title {
+    width: 150px;
+    padding: 0;
+    margin: 10px 0 42px 0;
+
+  }
+
+  .production-video__text {
+    width: 225px;
+    min-height: 52px;
+    margin: 0;
+  }
+
+  .production__link {
+    width: 230px;
+  }
+
+  .production-video__header-box { // контейнер-флекс для иконки камеры и заголовка
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .production-video__image-container { // контейнер-флекс для контента справа от видео
+    display: flex;
+    flex-direction: column;
+    margin-right: 78px;
+  }
+
+  .production-video__camera-icon { // сброс отступов для иконки камеры
+    padding: 0;
+    margin: 0;
+  }
+
+  .production__link {
+    margin-top: 51px;
+  }
+}

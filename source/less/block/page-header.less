@@ -1,12 +1,17 @@
-.page-header {
-  overflow: hidden;
-  background-color: @white;
-  border: 1px solid red;
+.page-header__text {
+  display: none;
 }
 
-.page-header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 79px;
+@media (min-width: @tablet-width) {
+  .page-header {
+    height: 88px;
+  }
+
+  .page-header__text {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-left: 530px;
+    color: @grey-dark;
+  }
 }
