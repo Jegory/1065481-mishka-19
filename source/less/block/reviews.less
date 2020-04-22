@@ -110,37 +110,25 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
+    display: flex;
     max-width: 768px;
-    margin: 0 auto;
-    padding: 0;
-    margin-top: 80px;
+    margin: 50px auto;
+    border: 1px solid red;
   }
 
   .reviews__wrapper {
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .reviews__bg-image {
-    display: block;
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 768px;
-    height: 457px;
-    display: block;
+    margin: 0 auto;
+    margin-left: 0;
   }
 
-  .reviews__image-product {
-    display: block;
-    position: relative;
+   .reviews__bg-image {
+    background: url("../img/review@1x.jpg") no-repeat;
   }
 
   .reviews__title {
-    position: absolute;
-    top: 76px;
-    left: 47px;
+    width: 300px;
+    margin: 86px 0 25px 47px;
     font-size: 43px;
     line-height: 1.16;
     text-align: left;
@@ -148,17 +136,20 @@
   }
 
   .reviews__list {
-    position: absolute;
-    top: 184px;
-    left: 47px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 668px;
+    margin-left: 50px;
+    border: 1px solid red;
   }
 
   .reviews__text {
-    width: 642px;
+    width: 645px;
     font-size: 17px;
     line-height: 1.76;
+    margin-bottom: 60px;
     border: 1px solid #000;
-    padding-bottom: 20px;
   }
 
   .reviews__author {
@@ -168,9 +159,14 @@
   }
 
   .reviews__button-box {
-    position: absolute;
-    top: 130px;
-    right: -35px;
+    width: 175px;
+    margin-top: -55px;
+    margin-right: -150px;
+    border: 1px solid #000;
+  }
+
+   .reviews__write-link {
+    margin: -324px 0 0 0;
     width: 175px;
     border: 1px solid #000;
   }
@@ -184,24 +180,19 @@
     border: none;
    background: none;
   }
-
-  .reviews__write-link {
-    position: absolute;
-    top: 75px;
-    right: 45px;
-    width: 175px;
-    border: 1px solid #000;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
+    display: flex;
+    height: 457px;
     max-width: 1150px;
     margin: 0 auto;
-    padding: 0;
+    margin-top: 50px;
   }
 
   .reviews__wrapper {
+    display: flex;
     width: 1050px;
     margin: 0 auto;
     border: 1px solid red;
@@ -209,7 +200,9 @@
 
   .reviews__title {
     margin-left: 124px;
-    margin-top: 0px;
+    margin-top: 80px;
+    font-size: 53px;
+    line-height: 1.08;
   }
 
   .reviews__text {
@@ -218,10 +211,10 @@
 
   .reviews__list {
     margin-left: 124px;
+    width: 770px;
   }
 
   .reviews__write-link {
-    position: absolute;
-    right: -200px;
+    margin-right: -155px;
   }
 }

@@ -105,10 +105,14 @@
   }
 }
 
+.logo-footer__icon {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .contacts {
     max-width: 768px;
-    margin: 0 auto;
+    margin: 50px auto;
   }
 
   .contacts__wrapper {
@@ -116,23 +120,27 @@
     padding: 0;
   }
 
+  .contacts__desktop-box {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid green;
+  }
+
   .contacts__title {
     font-size: 43px;
     line-height: 1.16;
-  }
-
-  .contacts__table-row,
-  .contacts__table-cell {
-    outline: 1px solid #000;
+    order: -1;
   }
 
   .contacts__table {
-    margin-right: 20px;
-    margin-bottom: 50px;
-    font-size: 17px;
-    line-height: 1.76;
     display: flex;
     justify-content: space-around;
+    margin: 50px auto;
+    font-size: 17px;
+    line-height: 1.76;
   }
 
   .contacts__table-cell {
@@ -162,26 +170,50 @@
   .carry {
     display: none;
   }
+
+  .logo-footer__icon {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 50px auto;
+
   }
 
   .contacts__wrapper {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 auto;
     padding: 0;
     margin: 70px 50px;
   }
 
+  .contacts__desktop-box-all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__desktop-box {
+    display: flex;
+    align-items: center;
+    padding-left: 63px;
+    border: 1px solid green;
+    width: 525px;
+  }
+
+  .contacts__title {
+    order: 1;
+    margin-right: 80px;
+  }
+
+  .contacts__icon-flag {
+
+  }
+
   .contacts__map-image-desktop {
     display: block;
-    // margin-left: 50px;
-    order: 2;
   }
 
   .contacts__map-image,
@@ -190,15 +222,22 @@
   }
 
   .contacts__table {
-    display: table;
-    // margin-left: 150px;
-    order: 3;
+    display: flex;
+    margin: 30px 10px 0 174px;
   }
 
   .contacts__title {
-    height: 40px;
-    order: 1;
+    font-size: 53px;
+    line-height: 1.08;
   }
 
+  .contacts__write-link {
+    margin-left: 224px;
+    margin-top: -120px;
+  }
+
+  .logo-footer__icon {
+    display: block;
+  }
 
  }

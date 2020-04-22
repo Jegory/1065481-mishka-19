@@ -89,10 +89,13 @@
               <a class="main-nav__link" href="catalog.html">Распродажа</a>
             </li>
 
+            <li class="main-nav__item-tablet main-nav__item-sale-desktop">
+              <p class="main-nav__text">Бесплатная доставка по России</p>
+            </li>
+
           </ul>
         </div>
       </nav>
-      <p class="page-header__text">Бесплатная доставка по России</p>
     </header>
 
     <main class="page-main">
@@ -137,8 +140,9 @@
         </div>
 
         <div class="top__wrapper">
-<div class="top__content">
-          <p class="top__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+
+          <div class="top__content">
+            <p class="top__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
 
 
             <table class="top__table">
@@ -240,7 +244,6 @@
         <div class="reviews__wrapper slider">
 
           <div class="reviews__bg-image">
-            <img class="reviews__image-product" src="../img/review@1x.jpg" width="350" height="457" alt="Заставка для блока отзывы">
 
           <h2 class="reviews__title title">Отзывы</h2>
 
@@ -279,8 +282,9 @@
                 <span class="visually-hidden">Следующий отзыв</span>
               </button>
             </div>
+            <a class="reviews__write-link" href="#">Написать</a>
           </div>
-          <a class="reviews__write-link" href="#">Написать</a>
+
           </div>
         </div>
       </section>
@@ -288,26 +292,42 @@
       <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__wrapper">
-            <h2 class="contacts__title title">Контакты</h2>
-            <div class="contacts__table">
-              <div class="contacts__table-row">
-                <div class="contacts__table-cell cell1">e-mail:</div>
-                <div class="contacts__table-cell cell2">
-                  <a class="cell-mail" href="#">info@mimimishkashop.ru</a>
-                </div>
-              </div>
-              <div class="contacts__table-row">
-                <div class="contacts__table-cell cell1">адрес:</div>
-                <div class="contacts__table-cell cell2">Санкт-Петербург, <br>ул. Большая <br class="carry"> Конюшенная, <br>д. 19/8, офис 101</div>
-              </div>
-            </div>
 
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта как добраться.">
-            <img class="contacts__map-image-tablet" src="img/map-tablet@1x.jpg" width="768" height="457" alt="Карта как добраться.">
-            <img class="contacts__map-image-desktop" src="img/map-desktop@1x.jpg" width="525" height="457" alt="Карта как добраться.">
-            <svg class="contacts__map-pin" width="67" height="100" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icon-svg/all-icon.svg#icon-map-pin"></use>
-            </svg>
+            <div class="contacts__desktop-box-all">
+
+              <div class="contacts__desktop-box">
+
+                <div class="contacts__icon-flag">
+                  <svg class="logo-footer__icon" width="47" height="81" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/icon-svg/all-icon.svg#icon-flag"></use>
+                  </svg>
+                </div>
+
+                <h2 class="contacts__title title">Контакты</h2>
+
+              </div>
+
+              <table class="contacts__table">
+                <tr class="contacts__table-row">
+                  <td class="contacts__table-cell cell1">e-mail:</td>
+                  <td class="contacts__table-cell cell2">
+                    <a class="cell-mail" href="#">info@mimimishkashop.ru</a>
+                  </td>
+                </tr>
+                <tr class="contacts__table-row">
+                   <td class="contacts__table-cell cell1">адрес:</td>
+                   <td class="contacts__table-cell cell2">Санкт-Петербург, <br>ул. Большая <br class="carry"> Конюшенная, <br>д. 19/8, офис 101</td>
+                </tr>
+              </table>
+            </div>
+              <picture>
+                <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта как добраться.">
+                <img class="contacts__map-image-tablet" src="img/map-tablet@1x.jpg" width="768" height="457" alt="Карта как добраться.">
+                <img class="contacts__map-image-desktop" src="img/map-desktop@1x.jpg" width="525" height="457" alt="Карта как добраться.">
+                <svg class="contacts__map-pin" width="67" height="100" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/icon-svg/all-icon.svg#icon-map-pin"></use>
+                </svg>
+              </picture>
           </div>
           <a class="contacts__write-link" href="#">Напишите нам</a>
       </section>
