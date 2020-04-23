@@ -1,7 +1,72 @@
-
-.page-main,
-.catalog-main,
-.form-main {
-  overflow: hidden;
-  border: 1px solid red;
+.page-main__bg-image {
+  width: auto;
+  margin: 0 auto;
+  background: url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  height: 373px;
 }
+
+.page-main__title {
+  margin: auto;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  width: 245px;
+  padding-top: 90px;
+  color: #010000;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-main__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .page-main__bg-image {
+    height: 746px;
+    width: auto;
+    margin: 0 auto;
+    background: url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+  }
+
+  .page-main__title {
+    width: auto;
+    margin: auto;
+    padding-top: 155px;
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .page-main__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .page-main__bg-image {
+    width: auto;
+    margin: 0 auto;
+    background: url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+  }
+
+  .page-main__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+}
+

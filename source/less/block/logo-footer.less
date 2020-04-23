@@ -1,0 +1,32 @@
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo {
+    display: block;
+    width: 200px;
+    height: 72px;
+    border: 1px solid red;
+  }
+
+  .logo-footer__link {
+    fill: @black;
+  }
+
+  .logo-footer__link:hover .logo-footer__icon,
+  .logo-footer__link:focus .logo-footer__icon {
+    fill: @green-input;
+  }
+
+  .logo-footer__link:active .logo-footer__icon {
+    opacity: 0.3;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-footer__logo {
+    flex-grow: 0;
+  }
+}

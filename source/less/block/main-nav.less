@@ -1,32 +1,45 @@
 .main-nav {
-  background-color: @white;
-  border: 1px solid green;
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .main-nav__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
 }
 
-.main-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.main-nav__burger-icon {
+  display: none;
 }
 
-.main-nav__item {
-  text-align: left;
-}
-
-.main-nav__link {
+.main-nav__close-burger {
   display: block;
-  margin: auto;
-  padding: 30px 0 30px 76px;
-  width: 320px;
-  height: 79px;
+}
+
+.main-nav__item .main-nav__logo-image {
+  display: block;
+  height: 37px;
+}
+
+.main-nav__item-logo {
+  height: 73px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-nav__list {  //ul
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-nav__link { // a
+  display: block;
+  position: relative;
+  padding: 30px 16px 30px 76px;
+  border-top: 1px solid #ececec;
   color: @black;
   font-size: 17px;
   font-weight: bold;
@@ -41,3 +54,223 @@
     color: @black-active;
   }
 }
+
+.main-nav__img { // иконки меню
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.2;
+}
+
+.main-nav__link:hover .main-nav__img,
+.main-nav__link:focus .main-nav__img {
+  fill: @green-input;
+  opacity: 1;
+}
+
+.main-nav__link:focus .main-nav__img {
+  opacity: 0.3;
+}
+
+.main-nav__logo-image-tablet,
+.main-nav__logo-image-desktop {
+  display: none;
+}
+
+.main-nav__item-new-desktop,
+.main-nav__item-sale-desktop {
+  display: none;
+}
+
+.main-nav__text {
+  display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .main-nav__list {  //ul
+    height: 88px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 768px;
+  }
+
+  .main-nav__text {        // Бесплатная доставка
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-left: 10px;
+    color: @grey-dark;
+    border: 1px solid red;
+  }
+
+  .main-nav__item { // li
+    border: 1px solid #ececec;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .main-nav__link {
+    padding: 35px 51px 35px 51px;
+  }
+
+  .main-nav__item-logo { // лого
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+
+  .main-nav__item-catalog { //каталог
+    order: 2;
+  }
+
+  .main-nav__item-order { // вязание
+    order: 3;
+  }
+
+  .main-nav__img { // иконка svg корзина
+    left: 5px;
+  }
+
+  .main-nav__item-search svg { // поиск иконка svg
+    margin-left: 35px;
+  }
+
+  .main-nav__search {
+    display: none; // скрыть подпись поиска
+  }
+
+  .main-nav__toggle {
+    display: none; // скрыть бургер
+  }
+
+  .main-nav__item-catalog a,
+  .main-nav__item-order a {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .main-nav__item .main-nav__logo-image {
+    display: none;
+  }
+
+ .main-nav__logo-image-tablet {
+    width: 112px;
+    height: 46px;
+    display: block;
+  }
+.main-nav__logo-image,
+.main-nav__logo-image-desktop {
+    display: none;
+  }
+
+  .main-nav__item-new-desktop,
+  .main-nav__item-sale-desktop {
+    display: none;
+  }
+
+  .main-nav__item-tablet {
+    display: block;
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .main-nav__text {        // Бесплатная доставка
+    margin-left: 440px;
+    border: 1px solid red;
+  }
+
+  .main-nav__list {  //ul
+    width: 1150px;
+  }
+
+  .main-nav__link {
+    padding: 35px 45px 35px 45px;
+  }
+
+  .main-nav__logo-image-desktop {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav__logo-image,
+  .main-nav__logo-image-tablet {
+    display: none;
+  }
+
+  .main-nav__item-catalog a,
+  .main-nav__item-order a,
+  .main-nav__basket {
+    font-size: 17px;
+    line-height: 1.41;
+  }
+
+  .main-nav__item-new-desktop a,
+  .main-nav__item-sale-desktop a {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .main-nav__item-logo { // лого
+    order: 3;
+  }
+
+  .main-nav__item-catalog { //каталог
+    order: 1;
+  }
+
+  .main-nav__item-order { // вязание
+    order: 2;
+  }
+
+  .main-nav__item-search {
+    order: 4;
+  }
+
+  .main-nav__item-basket {
+    order: 5;
+  }
+
+  .main-nav__item-new-desktop {
+    display: block;
+    order: 5;
+    font-size: 15px;
+  }
+
+  .main-nav__item-sale-desktop {
+    display: block;
+    order: 5;
+  }
+}
+
