@@ -10,7 +10,10 @@
   <body>
 
     <header class="page-header">
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
+
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+        </button>
 
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -21,45 +24,28 @@
                 <img class="main-nav__logo-image-tablet" src="img/logo-tablet.svg" width="112" height="46" alt="Логотип Мишка">
                 <img class="main-nav__logo-image-desktop" src="img/logo-desktop.svg" width="149" height="72" alt="Логотип Мишка">
               </a>
-
-              <button class="main-nav__toggle" type="button">
-                  <svg class="main-nav__burger-icon" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/icon-svg/all-icon.svg#icon-menu-open"></use>
-                  </svg>
-                  <svg class="main-nav__close-burger" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/icon-svg/all-icon.svg#icon-menu-close"></use>
-                  </svg>
-                  <span class="visually-hidden">Открыть меню</span>
-              </button>
             </li>
 
             <li class="main-nav__item main-nav__item-catalog">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-nav__link main-nav__link-catalog" href="catalog.html">Каталог товаров</a>
             </li>
 
             <li class="main-nav__item main-nav__item-order">
-              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+              <a class="main-nav__link main-nav__link-order" href="form.html">Вязание на заказ</a>
             </li>
 
             <li class="main-nav__item main-nav__item-search">
-              <a class="main-nav__link" href="#">
-                <svg class="main-nav__img" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-nav__link main-nav__link-search" href="#">
+                <svg class="main-nav__img main-nav__img--search" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/icon-svg/all-icon.svg#icon-search"></use>
                 </svg>
                 <span class="main-nav__search">Поиск по сайту</span>
               </a>
-
-              <!-- <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="main-nav__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <label class="main-nav__label" for="search"><span>Поиск по сайту</span></label>
-                <button class="visually-hidden" type="submit"></button>
-              </form> -->
-
             </li>
 
             <li class="main-nav__item main-nav__item-basket">
-              <a class="main-nav__link" href="#">
-                <svg class="main-nav__img" width="21" height="18" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-nav__link main-nav__link-basket" href="#">
+                <svg class="main-nav__img main-nav__img--basket" width="21" height="18" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/icon-svg/all-icon.svg#icon-cart"></use>
                 </svg>
                 <span class="main-nav__basket">Корзина: пока пуста</span>
@@ -74,15 +60,23 @@
               <a class="main-nav__link" href="catalog.html">Распродажа</a>
             </li>
 
+             <li class="main-nav__item-tablet main-nav__item-sale-desktop">
+              <p class="main-nav__text">Бесплатная доставка по России</p>
+            </li>
+
           </ul>
         </div>
       </nav>
-      <p class="page-header__text">Бесплатная доставка по России</p>
     </header>
 
     <main class="form-main">
       <section class="form-order">
         <h1 class="form-order__title">Вязание на заказ</h1>
+
+        <svg class="zigzag-fill" width="" height="" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/icon-svg/all-icon.svg#bg-zigzag-fill"></use>
+        </svg>
+
         <div class="form-order__wrapper">
           <h2 class="visually-hidden">Вязание на заказ</h2>
           <p class="form-order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказы и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -92,13 +86,13 @@
             <div class="form-order__radio form-box">
               <fieldset class="form__item">
                 <legend class="form__legend">Тип</legend>
-                <ul class="form__list">
-                  <li class="form__fillers">
-                    <input class="form__radio" type="radio" id="accessory" name="product" vaalue="accessory" checked>
+                <ul class="form__list form__list-radio">
+                  <li class="form__fillers form__fillers-radio">
+                    <input class="form__input form__radio" type="radio" id="accessory" name="product" vaalue="accessory" checked>
                     <label class="form__radio-label" for="accessory">Аксессуар для интерьера</label>
                   </li>
-                  <li>
-                    <input class="form__radio" type="radio" id="toys" name="product" value="toys">
+                  <li class="form__fillers form__fillers-radio">
+                    <input class="form__input form__radio" type="radio" id="toys" name="product" value="toys">
                     <label class="form__radio-label" for="toys">Детская игрушка</label>
                   </li>
                 </ul>
@@ -109,30 +103,37 @@
               <fieldset class="form__item">
                 <legend class="form__legend">Цвет</legend>
                 <ul class="form__list form__list-checkbox">
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="white" name="white" checked>
+                    <input class="form__input form__checkbox" type="checkbox" id="white" name="white" checked>
                     <label class="form__checkbox-label" for="white">Белый</label>
                   </li>
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="grey" name="grey" checked>
+                    <input class="form__input form__checkbox" type="checkbox" id="grey" name="grey" checked>
                     <label class="form__checkbox-label" for="grey">Серый</label>
                   </li>
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="tiffany" name="tiffany">
+                    <input class="form__input form__checkbox" type="checkbox" id="tiffany" name="tiffany">
                     <label class="form__checkbox-label" for="tiffany">«Тиффани»</label>
                   </li>
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="black" name="black">
+                    <input class="form__input form__checkbox" type="checkbox" id="black" name="black">
                     <label class="form__checkbox-label" for="black">Чёрный</label>
                   </li>
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="pink" name="pink">
+                    <input class="form__input form__checkbox" type="checkbox" id="pink" name="pink">
                     <label class="form__checkbox-label" for="pink">Розовый</label>
                   </li>
+
                   <li class="form__fillers form__fillers-checkbox">
-                    <input class="form__checkbox" type="checkbox" id="orange" name="orange">
+                    <input class="form__input form__checkbox" type="checkbox" id="orange" name="orange">
                     <label class="form__checkbox-label" for="orange">Оранжевый</label>
                   </li>
+
                 </ul>
               </fieldset>
             </div>
@@ -144,7 +145,7 @@
 
                   <li class="form__fillers-name">
                     <label class="form__text-label" for="first-name">Имя:</label>
-                    <input class="form__text form__text-desktop" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*"
+                    <input class="form__text form__text-tablet form__text-desktop" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*"
                   required>
                   </li>
 
@@ -166,11 +167,12 @@
 
             <div class="form-order__phone form-box">
               <fieldset class="form__item">
-                <legend class="form__legend">Тел</legend>
+                <legend class="form__legend form__legend--phone">Тел</legend>
                 <ul class="form__list form__list-phone">
+
                   <li class="form__fillers-phone">
                     <div class="form__phone-container">
-                      <input class="form__tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*"
+                      <input class="form__tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XX XX*"
                         required>
                       <svg class="form__icon-phone" width="25" height="24" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="img/icon-svg/all-icon.svg#icon-phone"></use>
@@ -179,7 +181,7 @@
                   </li>
 
                   <li class="form__fillers-phone">
-                    <legend class="form__legend">E-mail</legend>
+                    <legend class="form__legend form__legend--email">E-mail</legend>
                     <div class="form__phone-container">
                       <input class="form__mail" type="email" name="mail" id="mail" placeholder="Ваш Email*" required>
                       <svg class="form__icon-phone" width="32" height="21" xmlns="http://www.w3.org/2000/svg">
@@ -187,13 +189,14 @@
                       </svg>
                     </div>
                   </li>
+
                 </ul>
               </fieldset>
             </div>
 
             <div class="form-order__textarea form-box">
               <fieldset class="form__item">
-                <legend class="form__legend">Доп</legend>
+                <legend class="form__legend form__legend-textarea">Доп</legend>
                 <textarea class="form__textarea" form="order" name="extra" cols="27" rows="7"
                   placeholder="Опишите все ваши пожелания к заказу">
                 </textarea>
@@ -253,7 +256,7 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <strong class="copyright__text">Разработано</strong>
+        <div><strong class="copyright__text">Разработано</strong></div>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__icon" width="37" height="44" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icon-svg/all-icon.svg#htmlacademy"></use>
@@ -262,6 +265,6 @@
         </a>
       </div>
     </footer>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

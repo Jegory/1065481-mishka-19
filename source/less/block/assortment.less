@@ -15,13 +15,22 @@
   padding: 0;
   margin: 0;
   right: 27px;
+  top: 24px;
 }
 
-.assortment__interior,
+.assortment__interior {
+  display: inline-block;
+  width: 110px;
+  height: 45px;
+  margin-left: -2px;
+}
+
 .assortment__toy {
   display: inline-block;
   width: 110px;
   height: 45px;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 
 .assortment__link {
@@ -41,6 +50,7 @@
 .assortment__link--interior {
   position: relative;
   display: block;
+  height: 103px;
   padding: 30px;
   font-size: 19px;
   font-weight: bold;
@@ -63,10 +73,11 @@
   position: relative;
   display: block;
   margin: 0;
+  height: 103px;
   padding: 25px;
   font-size: 19px;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.26;
   text-decoration: none;
   background-color: #56c3b2;
   color: @white;
@@ -81,10 +92,20 @@
   }
 }
 
+@media (min-width: @mobile-width) {
+  .zigzag-fill--interior,
+  .zigzag-fill--toy,
+  .zigzag-fill {
+    display: none;
+  }
+}
+
+
 @media (min-width: @tablet-width) {
   .assortment {
     max-width: 768px;
     margin: 0 auto;
+    margin-top: -119px;
   }
 
   .assortment__list {
@@ -95,6 +116,72 @@
 
   .assortment__item {
     width: 334px;
+  }
+
+  .assortment__link--interior {
+    height: 112px;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 28px;
+    padding-left: 37px;
+  }
+
+  .assortment__link--toy {
+    height: 112px;
+     font-size: 20px;
+    line-height: 1.5;
+    padding-top: 26px;
+    padding-left: 33px;
+  }
+
+  .icon-interior {
+    top: 30px;
+  }
+
+  .icon-toy {
+    padding-top: 7px;
+    right: 32px;
+  }
+
+  .zigzag-fill--interior {
+    display: block;
+    margin-top: -8px;
+    transform: rotate(180deg);
+    fill: #63d1bb;
+    width: 334px;
+    height: 15px;
+
+    &:active {
+      fill: @white-down;
+    }
+
+    &:hover,
+    &:active {
+      fill: #59d5bc;
+    }
+  }
+
+  .zigzag-fill--toy {
+    display: block;
+    margin-top: -8px;
+    transform: rotate(180deg);
+    fill: #56c3b2;
+    width: 334px;
+    height: 15px;
+
+    &:active {
+      fill: @white-down;
+    }
+
+    &:hover,
+    &:active {
+      fill: #46c1ae;
+    }
+  }
+
+    .zigzag-fill-assortment {
+    margin-top: 30px;
+    z-index: 5;
   }
 }
 
@@ -110,5 +197,15 @@
 
   .assortment__item {
     width: 525px;
+  }
+
+  .zigzag-fill--interior {
+    width: 525px;
+    height: 23px;
+  }
+
+  .zigzag-fill--toy {
+    width: 525px;
+    height: 23px;
   }
 }

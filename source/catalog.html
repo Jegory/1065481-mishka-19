@@ -10,7 +10,10 @@
   <body>
 
     <header class="page-header">
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
+
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+        </button>
 
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -21,45 +24,28 @@
                 <img class="main-nav__logo-image-tablet" src="img/logo-tablet.svg" width="112" height="46" alt="Логотип Мишка">
                 <img class="main-nav__logo-image-desktop" src="img/logo-desktop.svg" width="149" height="72" alt="Логотип Мишка">
               </a>
-
-              <button class="main-nav__toggle" type="button">
-                  <svg class="main-nav__burger-icon" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/icon-svg/all-icon.svg#icon-menu-open"></use>
-                  </svg>
-                  <svg class="main-nav__close-burger" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/icon-svg/all-icon.svg#icon-menu-close"></use>
-                  </svg>
-                  <span class="visually-hidden">Открыть меню</span>
-              </button>
             </li>
 
             <li class="main-nav__item main-nav__item-catalog">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-nav__link main-nav__link-catalog" href="catalog.html">Каталог товаров</a>
             </li>
 
             <li class="main-nav__item main-nav__item-order">
-              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+              <a class="main-nav__link main-nav__link-order" href="form.html">Вязание на заказ</a>
             </li>
 
             <li class="main-nav__item main-nav__item-search">
-              <a class="main-nav__link" href="#">
-                <svg class="main-nav__img" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-nav__link main-nav__link-search" href="#">
+                <svg class="main-nav__img main-nav__img--search" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/icon-svg/all-icon.svg#icon-search"></use>
                 </svg>
                 <span class="main-nav__search">Поиск по сайту</span>
               </a>
-
-              <!-- <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="main-nav__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <label class="main-nav__label" for="search"><span>Поиск по сайту</span></label>
-                <button class="visually-hidden" type="submit"></button>
-              </form> -->
-
             </li>
 
             <li class="main-nav__item main-nav__item-basket">
-              <a class="main-nav__link" href="#">
-                <svg class="main-nav__img" width="21" height="18" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-nav__link main-nav__link-basket" href="#">
+                <svg class="main-nav__img main-nav__img--basket" width="21" height="18" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/icon-svg/all-icon.svg#icon-cart"></use>
                 </svg>
                 <span class="main-nav__basket">Корзина: пока пуста</span>
@@ -74,15 +60,22 @@
               <a class="main-nav__link" href="catalog.html">Распродажа</a>
             </li>
 
+             <li class="main-nav__item-tablet main-nav__item-sale-desktop">
+              <p class="main-nav__text">Бесплатная доставка по России</p>
+            </li>
+
           </ul>
         </div>
       </nav>
-      <p class="page-header__text">Бесплатная доставка по России</p>
     </header>
 
     <main class="catalog-main">
 
       <h1 class="catalog-main__title">Каталог товаров</h1>
+
+      <svg class="zigzag-fill" width="" height="" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/icon-svg/all-icon.svg#bg-zigzag-fill"></use>
+      </svg>
 
       <section class="catalog">
         <div class="catalog__wrapper">
@@ -165,6 +158,7 @@
             <img class="production-video__bg-tablet" src="img/video-tablet@1x.jpg" width="668" height="455" alt="Промо-видео продукции">
             <img class="production-video__bg-desktop" src="img/video-desktop@1x.jpg" width="682" height="455" alt="Промо-видео продукции">
           </div>
+
           <div class="production-video__dektop-container">
 
             <div class="production-video__header-box">
@@ -246,23 +240,33 @@
             <h2 class="modal__title">Добавить в корзину</h2>
             <fieldset class="basket-form__fieldset">
               <legend class="basket-form__legend">Выберите размер:</legend>
-              <label class="basket-form__radio">
-                <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
-                <span class="basket-form__size">s</span>
-              </label>
-              <label class="basket-form__radio">
-                <input class="visually-hidden" type="radio" name="size-product" value="2">
-                <span class="basket-form__size">m</span>
-              </label>
-              <label class="basket-form__radio">
-                <input class="visually-hidden" type="radio" name="size-product" value="3">
-                <span class="basket-form__size">l</span>
-              </label>
+              <div class="basket-form__size-box">
+                <div class="basket-form__modal-border">
+                  <label class="basket-form__radio">
+                    <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
+                    <span class="basket-form__size">s</span>
+                  </label>
+                </div>
+                <div class="basket-form__modal-border">
+                  <label class="basket-form__radio">
+                    <input class="visually-hidden" type="radio" name="size-product" value="2">
+                    <span class="basket-form__size">m</span>
+                  </label>
+                </div>
+                <div class="basket-form__modal-border">
+                  <label class="basket-form__radio">
+                    <input class="visually-hidden" type="radio" name="size-product" value="3">
+                    <span class="basket-form__size">l</span>
+                  </label>
+                </div>
+              </div>
             </fieldset>
             <button class="modal__button button">Добавить</button>
           </form>
         </div>
       </section>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

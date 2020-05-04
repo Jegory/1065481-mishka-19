@@ -1,3 +1,9 @@
+@media (max-width: @mobile-width) {
+  .production-video__dektop-container {
+  display: none;
+  }
+}
+
 .production-video {
   max-width: 320px;
   margin: 0 auto;
@@ -12,12 +18,12 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  // min-height: 745px;
 }
 
 .production-video__header-box {
   display: flex;
   margin-left: 33px;
+  order: -1;
 }
 
 .production-video__camera-icon { // иконка камеры
@@ -40,11 +46,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 1;
 }
-
-.production-video__header-box {
-  order: -1;
-  }
 
 .production-video__play-button { // кнопка на видео
   position: absolute;
@@ -68,10 +71,12 @@
   line-height: 1.85;
   text-align: left;
   color: @grey-dark;
+  order: ;
 }
 
 .production__link {
   margin: 0 34px;
+  order: ;
 }
 
 .production-video__bg-tablet,
@@ -85,7 +90,6 @@
     max-width: 768px;
     min-height: 745px;
     margin: 0 auto;
-    margin-top: 53px;
     margin-bottom: 63px;
   }
 
@@ -94,6 +98,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding-bottom: 46px;
   }
 
   .production-video__bg-tablet { // отображаем заставку для планшетной версии
@@ -112,35 +117,46 @@
   .production-video__camera-icon {
     width: 100px;
     margin-left: 10px;
+    margin-top: 25px;
   }
 
   .production-video__title {
     width: 400px;
     font-size: 20px;
     line-height: 1.2;
+    margin-top: 35px;
+    margin-left: -36px;
   }
 
   .production-video__text {
     width: 585px;
     font-size: 15px;
     line-height: 2;
-    margin-left: 42px;
+    margin-left: 40px;
+    margin-top: 15px;
   }
 
   .production__link {
     width: 584px;
     height: 52px;
-    margin: 0 auto;
+    margin: 35px auto 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+
+  .catalog__cost {
+    margin-left: -8px;
+    margin-top: -5px;
+  }
+
+  //-- VIDEO------------------------
   .production-video {
     width: 1150px;
     max-width: 1150px;
     min-height: 455px;
     margin: 0 auto;
-    margin-bottom: 55px;
+    margin-bottom: 58px;
   }
 
   .production-video-wrapper {
@@ -172,17 +188,19 @@
     width: 225px;
     min-height: 52px;
     margin: 0;
+    margin-top: -8px;
   }
 
-  .production__link {
+  .production-video__dektop-container a {
     width: 230px;
+    margin-top: 46px;
   }
 
   .production-video__header-box { // контейнер-флекс для иконки камеры и заголовка
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 35px;
   }
 
   .production-video__image-container { // контейнер-флекс для контента справа от видео
