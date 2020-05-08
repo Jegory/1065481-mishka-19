@@ -107,16 +107,20 @@
   }
 
   .catalog__wrapper {
-   display: flex;
+    display: flex;
     margin: 0 auto;
     margin-top: -30px;
+  }
+
+  .catalog__list {
+    margin-top: 75px;
   }
 
   .catalog-main__title {
     height: 226px;
     font-size: 73px;
     line-height: 1.16;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 768px;
   }
 
@@ -159,7 +163,7 @@
     margin: 2px 0 0 24px;
   }
 
-   .catalog__item-tablet {
+  .catalog__item-tablet {
     width: 265px;
     font-size: 17px;
     line-height: 1.41;
@@ -169,10 +173,10 @@
   }
 
   .catalog__cost {
-  font-size: 17px;
-  line-height: 1.41;
-  margin-left: -5px;
-}
+    font-size: 17px;
+    line-height: 1.41;
+    margin-left: -5px;
+  }
 
   .catalog ul li:last-child { // высота последнего блока
     height: 334px;
@@ -183,13 +187,13 @@
   }
 }
 
-  .zigzag-fill {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    top: -60px;
-    transform: rotate(180deg);
-  }
+.zigzag-fill {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: -60px;
+  transform: rotate(180deg);
+}
 
 @media (min-width: @desktop-width) {
   .catalog {
@@ -201,7 +205,7 @@
     display: flex;
     margin: 0 auto;
     min-height: 660px;
-    margin-top: 13px;
+    margin-top: 20px;
     margin-bottom: 56px;
   }
 
@@ -226,6 +230,10 @@
     height: 660px;
     flex-wrap: wrap;
     border: 1px solid #ececec;
+  }
+
+  .catalog ul li:last-child {
+    height: auto;
   }
 
   .catalog__link {

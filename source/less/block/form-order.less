@@ -1,3 +1,7 @@
+.form-order {
+  margin-bottom: -58px;
+}
+
 .form__radio-label,
 .form__checkbox-label,
 .form__text-label {
@@ -11,21 +15,21 @@
 .form__text,
 .form__tel,
 .form__mail {
-  width: 233px;
   height: 36px;
   font-size: 17px;
   line-height: 1.06;
   text-align: left;
   color: @grey-range-text;
-  border-bottom: 2px solid #000000; // заливка бордера инпута
 }
 
-.form__textarea {
-  border: 2px solid #000000;  // заливка бордер текстеареа
+input {
+  border: none;
+  padding: 25px 1px;
 }
 
-.form__text {
-  width: 258px;
+label {
+  margin-left: 20px;
+  margin-bottom: 25px;
 }
 
 .form__legend {    // тип, цвет, тел, емаил, доп
@@ -59,9 +63,36 @@
 
 .form__list {     // ul
   display: flex;
+  padding-left: 0;
   flex-direction: column;
   align-items: baseline;
   justify-content: space-around;
+}
+
+.form-box {
+  margin-bottom: 14px;
+}
+
+.form-order__title {
+  padding: 71px 0 76px 0;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-align: center;
+  color: @black;
+  background: @grey-light;
+}
+
+.form-order__text {
+  font-size: 13px;
+  line-height: 1.85;
+  text-align: left;
+  color: @grey-dark;
+  margin: 23px 0 20px 0;
+}
+
+.form__text-label {
+  margin: -5px 0 25px 0;
 }
 
 // RADIO---------------------
@@ -112,19 +143,23 @@
   margin-bottom: 43px;
 }
 
+.form__list .form__list-checkbox {
+  padding-left: 0;
+}
+
 .form__checkbox + label::before { // окно импута checkbox
   content: "";
   position: absolute;
   left: -21px;
   top: -10px;
-  width: 40px;
-  height: 39px;
+  width: 36px;
+  height: 35px;
   border: 2px solid @grey-dark;
 }
 
 .form__checkbox + label:hover::before,
 .form__radio + label:hover::before { // окно импута:hover
-   border: 2px solid @green-range;
+  border: 2px solid @green-range;
 }
 
 .form__checkbox + label:active::before,
@@ -132,7 +167,6 @@
   border: 2px solid @grey-dark;
   opacity: 0.3;
 }
-
 
 .form__checkbox:checked + label::after { // галочка импута
   content: "";
@@ -154,108 +188,100 @@
 }
 
 .form__text {
+  width: 258px;
   margin-top: -25px;
   margin-bottom: 27px;
   margin-left: -2px;
+  border-bottom: 2px solid #000000;
 }
 
-//-------------------------
-input {
-  border: none;
-  padding: 25px 1px;
+input[type="text"]::placeholder {
+  opacity: 0.3;
+  font-size: 17px;
+  line-height: 1.06;
 }
-
-label {
-  margin-left: 20px;
-  margin-bottom: 25px;
-}
-
-.form-box {
-  margin-bottom: 14px;
-}
-
-.form-order__title {
-  padding: 71px 0 76px 0;
-  font-size: 27px;
-  font-weight: bold;
-  line-height: 1.11;
-  text-align: center;
-  color: @black;
-  background: @grey-light;
-}
-
-.form-order__text {
-  font-size: 13px;
-  line-height: 1.85;
-  text-align: left;
-  color: @grey-dark;
-  margin: 23px 0 20px 0;
-}
-
-.form__text-label {
-  margin: -5px 0 25px 0;
-}
-
-// .form-order__radio {
-//   outline: 1px solid tomato;
-// }
-
-// .form-order__checkbox {
-//   outline: 1px solid tomato;
-// }
-
-// .form-order__name {
-//   outline: 1px solid tomato;
-// }
 
 // -- PHONE------------------
+.form-order__phone {
+  margin-top: -35px;
+}
+
 .form__phone-container {
   display: flex;
+  flex-direction: column;
+  width: 260px;
+  border-bottom: 2px solid @black;
+  fill: #cccccc;
+
+  &:hover {
+    border-color: @green-range;
+  }
+
+  &:active {
+    border-color: @green-range;
+  }
 }
 
-.form-order__phone {
-  margin-top: -12px;
+.form__legend--phone {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-.form__tel {
-  margin-top: -30px;
-  margin-bottom: 29px;
-  margin-left: -2px;
+.form__fillers-phone {
+  margin-bottom: 30px;
 }
 
 .form__icon-phone {
-  border-bottom: 2px solid #000000;  // бордер под иконкой
   margin-top: -30px;
-  margin-bottom: 29px;
-  margin-left: -6px;
+  margin-left: 217px;
+  margin-bottom: 10px;
 }
 
-// -- MAIL------------------
-.form__mail {
-  margin-top: -29px;
-  margin-left: -2px;
-  margin-bottom: 29px;
+.form__icon-mail {
+  margin-top: -40px;
+  margin-left: 217px;
+  margin-bottom: 10px;
 }
 
-.form__info {
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: left;
-  color: @grey-dark;
+input[type='tel']::placeholder {
+  opacity: 0.3;
+  font-size: 19px;
+  line-height: 1.06;
+}
+
+input[type='email']::placeholder {
+  opacity: 0.3;
+  font-size: 17px;
+  line-height: 1.06;
+}
+
+.form__legend--mail {
+  margin-bottom: 6px;
 }
 
 //-TEXTAREA-------------------
 .form-order__textarea {
-  margin-top: -12px;
+  margin-top: -16px;
 }
 
 .form__textarea {
   margin-top: -10px;
+  height: 142px;
+  width: 260px;
+  border: 2px solid #000000;  // заливка бордер текстеареа
+}
+
+textarea[name="extra"]::placeholder {
+  padding-top: 10px;
+  padding-left: 10px;
+  opacity: 0.3;
+  font-size: 17px;
+  line-height: 1.06;
 }
 
 //----------------------------
 .form__submit {         // кнопка
-  margin: 30px 0 55px 0;
+  margin: 27px 0 55px 0;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -282,10 +308,6 @@ label {
   }
 }
 
-.form__phone-container { // цвет иконки
-  fill: #cccccc;
-}
-
 .form__phone-container:hover .form__icon-phone,
 .form__phone-container:focus .form__icon-phone { // цвет иконки при наведении
   fill: @green-range;
@@ -303,27 +325,38 @@ label {
 }
 
 input:focus {    // цвет текста активного инпута
-color: @grey-dark;
+  color: @grey-dark;
 }
 
 .zigzag-fill {
   display: none;
 }
 
+//---------------------------------
+.form__info {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: left;
+  color: @grey-dark;
+}
+
 @media (min-width: @tablet-width) {
+  .form-order {
+    margin-bottom: 0;
+  }
+
   .form-order__title {
-    height: 205px;
+    height: 237px;
     font-size: 43px;
     line-height: 1.16;
-    margin-top: -88px;
     padding-top: 94px;
   }
 
-   .form-order__text {
+  .form-order__text {
     width: 612px;
     font-size: 17px;
     line-height: 1.76;
-    margin: -48px 0px 0 49px;
+    margin: 38px 0 0 49px;
   }
 
   .form-order__form {
@@ -332,7 +365,7 @@ color: @grey-dark;
 
   .form__tel,
   .form__mail {
-    background: #F2F2F2;
+    background: #f2f2f2;
   }
 
   .form__radio-label,
@@ -352,7 +385,7 @@ color: @grey-dark;
     }
   }
 
-// RADIO---------------------
+  // RADIO---------------------
   .form-order__radio {
     position: relative;
     padding: 40px 0;
@@ -363,7 +396,6 @@ color: @grey-dark;
   }
 
   .form__fillers-radio label {
-    margin: 0;
     margin: 18px;
     padding: 15px 0 7px 80px;
   }
@@ -382,10 +414,10 @@ color: @grey-dark;
     height: 22px;
   }
 
-// CHECKBOX------------------------
+  // CHECKBOX------------------------
   .form-order__checkbox {  // фон
     position: relative;
-    background: #F2F2F2;
+    background: #f2f2f2;
     margin-top: -8px;
   }
 
@@ -394,7 +426,6 @@ color: @grey-dark;
   }
 
   .form__fillers-checkbox label {  // текст
-    margin: 0;
     margin: 24px;
     padding: 5px 0 0 60px;
   }
@@ -425,17 +456,13 @@ color: @grey-dark;
     top: 5px;
   }
 
-//NAME------------------------------
+  //NAME------------------------------
   .form-order__name { // контейнер
     height: 290px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .form-order__name .form__legend {
-    top: 51px;
   }
 
   .form__list-name {   // ul
@@ -449,6 +476,14 @@ color: @grey-dark;
     margin-left: 167px;
   }
 
+  .form__legend-name {
+    margin-top: -20px;
+  }
+
+  .form__fillers-phone {
+    margin-bottom: 10px;
+  }
+
   .form__fillers-name label {   //  текст
     margin: 0;
     padding: 0 27px 0 0;
@@ -456,65 +491,79 @@ color: @grey-dark;
 
   .form__text {
     width: 375px;
+    padding-left: 17px;
   }
 
   .form__text-tablet {   // длинна линии подчеркивания
     width: 428px;
+    padding-left: 17px;
   }
 
-  .form__fillers-name [placeholder] {
+  input[type="text"]::placeholder {
+    opacity: 0.3;
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  // -- PHONE------------------
+  .form-order__phone {
+    position: relative;
+    height: 228px;
+    padding-top: 30px;
+    margin-top: -10px;
+    margin-bottom: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+  }
+
+  .form__phone-container {
+    display: flex;
+    flex-direction: column;
+    width: 501px;
+    margin-left: 167px;
+    margin-top: 20px;
+    margin-bottom: 21px;
+  }
+
+  .form__legend--phone {
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+
+  .form__legend--mail {
+    margin-top: 65px;
+    margin-bottom: 5px;
+  }
+
+  .form__icon-phone {
+    margin-top: -35px;
+    margin-left: 452px;
+    margin-bottom: 17px;
+  }
+
+  .form__icon-mail {
+    margin-top: -34px;
+    margin-left: 443px;
+    margin-bottom: 5px;
+  }
+
+  .form__tel {
+    margin-top: -30px;
+  }
+
+  input[type='tel']::placeholder {
+    padding-left: 17px;
+  }
+
+  input[type='email']::placeholder {
     padding-left: 17px;
     font-size: 19px;
     line-height: 0.95;
   }
 
-  // PHONE -----------------------
-  .form__legend--email {  // ТЕЛ, МЭИЛ
-    position: absolute;
-    margin-top: 67px;
-  }
-
-  .form__legend--phone {
-    margin-top: -10px;
-  }
-
-  .form-order__phone {
-    position: relative;
-    height: 228px;
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #F2F2F2;
-  }
-
-  .form__tel {
-    width: 485px;
-  }
-
-  .form__mail {
-    width: 478px;
-  }
-
-  .form__list-phone {
-    margin-top: -45px;
-    margin-left: 165px;
-  }
-
-  .form__fillers-phone [placeholder] {
-    padding-left: 20px;
-    padding-top: 50px;
-    font-size: 19px;
-    line-height: 0.95;
-  }
-
-  .form__icon-phone {
-    padding-top: 25px;
-    padding-left: 0px;
-  }
-
-//----TEXTAREA-------------
+  //----TEXTAREA-------------
   .form-order__textarea {
     position: relative;
     height: 228px;
@@ -522,6 +571,7 @@ color: @grey-dark;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
   }
 
   .form__legend-textarea {
@@ -535,7 +585,7 @@ color: @grey-dark;
     margin-top: 15px;
   }
 
-  .form-order__textarea [placeholder] {
+  textarea[name="extra"]::placeholder {
     font-size: 19px;
     line-height: 0.95;
   }
@@ -563,11 +613,13 @@ color: @grey-dark;
   }
 
   .zigzag-fill {
+    width: 770px;
+    height: 24px;
     display: block;
     margin: 0 auto;
-    margin-top: -10px;
-    fill: #F1F1F1;
-    transform: rotate(180deg)
+    top: -23px;
+    transform: rotate(0deg);
+    fill: @white;
   }
 }
 
@@ -575,7 +627,7 @@ color: @grey-dark;
   .form__tel,
   .form__mail {
     width: 670px;
- }
+  }
 
   .form__text {
     width: 573px;
@@ -586,10 +638,9 @@ color: @grey-dark;
   }
 
   .form-order__title {
-    height: 230px;
+    height: 250px;
     font-size: 53px;
     line-height: 1.08;
-    margin-top: -72px;
     padding-top: 94px;
   }
 
@@ -597,7 +648,7 @@ color: @grey-dark;
     width: 672px;
     font-size: 17px;
     line-height: 1.76;
-    margin: 6px 0 0 224px;
+    margin: 90px 0 0 224px;
   }
 
   .form__legend { // тип, цвет, тел, емаил, доп
@@ -621,19 +672,12 @@ color: @grey-dark;
   }
 
   // CHECKBOX------------------------
-  .form__list-checkbox { // флекс
-    margin-left: 225px;
-    margin-right: 150px;
-  }
-
-  // CHECKBOX------------------------
   .form-order__checkbox .form__legend {
     left: 110px;
   }
 
   .form__list-checkbox { // флекс
     margin: 33px 172px 40px 220px;
-
   }
 
   .form__checkbox + label::before { // окно импута checkbox
@@ -641,13 +685,9 @@ color: @grey-dark;
     height: 52px;
   }
 
-//NAME------------------------------
-  .form__text {
-    width: 575px;
-  }
-
-  .form__text-tablet {   // длинна линии подчеркивания
-    width: 626px;
+  //NAME------------------------------
+  .form__fillers-name {
+    margin-left: 165px;
   }
 
   .form-order__name .form__legend {
@@ -658,31 +698,62 @@ color: @grey-dark;
     margin-left: 165px;
   }
 
-  // PHONE -----------------------
-  .form__tel {
-    width: 680px;
+  .form__legend-name {
+    margin-top: 10px;
   }
 
-  .form__mail {
-    width: 675px;
-  }
-
-  .form__list-phone {
-    margin: 0 auto;
-    margin-top: -45px;
-  }
-
-  .form__legend--email {  // ТЕЛ, МЭИЛ
-    top: 73px;
-    left: 112px;
+  // -- PHONE------------------
+  .form__phone-container {
+    width: 700px;
+    margin-left: 330px;
+    margin-top: 21px;
+    margin-bottom: 25px;
   }
 
   .form__legend--phone {
-    top: 73px;
-    left: 112px;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
-//----TEXTAREA-------------
+  .form__legend--mail {
+    margin-top: 97px;
+    margin-bottom: 5px;
+  }
+
+  .form__icon-phone {
+    margin-top: -33px;
+    margin-left: 667px;
+    margin-bottom: 17px;
+  }
+
+  .form__icon-mail {
+    margin-top: -37px;
+    margin-left: 659px;
+    margin-bottom: 7px;
+  }
+
+  .form__tel {
+    width: 475px;
+    margin-top: -30px;
+  }
+
+  .form__fillers-phone [placeholder] {
+    width: 700px;
+  }
+
+  input[type='tel']::placeholder {
+    padding-left: 17px;
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  input[type='email']::placeholder {
+    padding-left: 17px;
+    font-size: 19px;
+    line-height: 0.95;
+  }
+
+  //----TEXTAREA-------------
   .form__textarea {
     width: 700px;
     height: 142px;
@@ -702,5 +773,15 @@ color: @grey-dark;
     margin: 0 auto;
     margin-top: -5px;
     margin-bottom: 50px;
+  }
+
+  .zigzag-fill {
+    width: 1150px;
+    height: 34px;
+    display: block;
+    margin: auto;
+    top: -16px;
+    transform: rotate(0deg);
+    fill: @white;
   }
 }

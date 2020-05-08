@@ -53,6 +53,7 @@
   font-size: 15px;
   line-height: 1;
   text-align: left;
+  margin-left: 0;
   color: @grey-dark;
 }
 
@@ -62,8 +63,8 @@
 
 .top__table-cell {
   display: table-cell;
-  align-items: center;
-  padding: 11px 25px 12px 0px;
+  align-items: flex-start;
+  padding: 11px 25px 12px 0;
   border-bottom: 1px solid #ececec;
 }
 
@@ -101,8 +102,8 @@
 
 .top__image-product-tablet,
 .top__image-product-desktop {
-    display: none;
-  }
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .top {
@@ -118,7 +119,6 @@
     justify-content: space-between;
     flex-direction: column;
     margin: 0 49px;
-    border: 1px solid red;
   }
 
   .top__heading {
@@ -135,8 +135,7 @@
     width: 430px;
     font-size: 43px;
     line-height: 1.16;
-    margin: 31px 0 55px 45px;
-    border: 1px solid #000;
+    margin: 10px 0 55px 45px;
   }
 
   .top__week {
@@ -145,8 +144,7 @@
     line-height: 1;
     text-align: center;
     margin-left: 144px;
-    margin-top: 40px;
-    border: 1px solid #000;
+    margin-top: 20px;
   }
 
   .top__text {
@@ -155,27 +153,20 @@
     line-height: 1.78;
     text-align: left;
     margin: 0;
-    margin-top: -9px;
-
+    margin-top: -7px;
   }
 
   .top__table {
-    margin: 0;
-    padding: 0;
-    margin-top: 33px;
-    line-height: 0.93;
-    border: 1px solid #000;
+    margin-top: 35px;
+    margin-left: -10px;
   }
 
-  tbody {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  .top__table-cell {
+    padding: 11px 20px 12px 5px;
   }
 
   .top__order {
     width: 333px;
-    border: 1px solid #000;
     margin: 0 auto;
   }
 
@@ -183,10 +174,13 @@
     font-size: 20px;
     line-height: 1.2;
     margin-right: 45px;
+    margin-top: 10px;
   }
 
   .top__link {
     width: 292px;
+    margin-left: -5px;
+    margin-bottom: -5px;
   }
 
   .top__bg-image {
@@ -207,7 +201,7 @@
   .top {
     width: auto;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 38px;
   }
 
   .top__wrapper {
@@ -229,7 +223,6 @@
   .top__heading {
     position: absolute;
     width: 1050px;
-    border: 1px solid tomato;
     margin: 0 50px;
   }
 

@@ -1,6 +1,6 @@
 @media (max-width: @mobile-width) {
   .production-video__dektop-container {
-  display: none;
+    display: none;
   }
 }
 
@@ -22,7 +22,7 @@
 
 .production-video__header-box {
   display: flex;
-  margin-left: 33px;
+  margin: 7px 0 10px 33px;
   order: -1;
 }
 
@@ -71,12 +71,10 @@
   line-height: 1.85;
   text-align: left;
   color: @grey-dark;
-  order: ;
 }
 
 .production__link {
   margin: 0 34px;
-  order: ;
 }
 
 .production-video__bg-tablet,
@@ -101,8 +99,12 @@
     padding-bottom: 46px;
   }
 
+  .production-video__header-box {
+    margin-top: 0;
+  }
+
   .production-video__bg-tablet { // отображаем заставку для планшетной версии
-     display: block;
+    display: block;
   }
 
   .production-video__bg-image,
@@ -110,8 +112,8 @@
     display: none;
   }
 
-  .production-video__image-container { // меняем расположение флекс блоков
-    order: -1;
+  .production-video__image-container {
+    order: -2;
   }
 
   .production-video__camera-icon {
@@ -133,18 +135,22 @@
     font-size: 15px;
     line-height: 2;
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   .production__link {
     width: 584px;
     height: 52px;
-    margin: 35px auto 0;
+    margin: 10px auto 0;
+  }
+
+  .production-video__dektop-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (min-width: @desktop-width) {
-
   .catalog__cost {
     margin-left: -8px;
     margin-top: -5px;
@@ -181,7 +187,6 @@
     width: 150px;
     padding: 0;
     margin: 10px 0 42px 0;
-
   }
 
   .production-video__text {
@@ -194,6 +199,10 @@
   .production-video__dektop-container a {
     width: 230px;
     margin-top: 46px;
+  }
+
+  .production-video__dektop-container {
+    display: flex;
   }
 
   .production-video__header-box { // контейнер-флекс для иконки камеры и заголовка

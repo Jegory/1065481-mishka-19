@@ -119,7 +119,7 @@
   }
 
   .assortment__link--interior {
-    height: 112px;
+    height: 130px;
     font-size: 20px;
     line-height: 1.5;
     padding-top: 28px;
@@ -127,8 +127,8 @@
   }
 
   .assortment__link--toy {
-    height: 112px;
-     font-size: 20px;
+    height: 130px;
+    font-size: 20px;
     line-height: 1.5;
     padding-top: 26px;
     padding-left: 33px;
@@ -142,53 +142,13 @@
     padding-top: 7px;
     right: 32px;
   }
-
-  .zigzag-fill--interior {
-    display: block;
-    margin-top: -8px;
-    transform: rotate(180deg);
-    fill: #63d1bb;
-    width: 334px;
-    height: 15px;
-
-    &:active {
-      fill: @white-down;
-    }
-
-    &:hover,
-    &:active {
-      fill: #59d5bc;
-    }
-  }
-
-  .zigzag-fill--toy {
-    display: block;
-    margin-top: -8px;
-    transform: rotate(180deg);
-    fill: #56c3b2;
-    width: 334px;
-    height: 15px;
-
-    &:active {
-      fill: @white-down;
-    }
-
-    &:hover,
-    &:active {
-      fill: #46c1ae;
-    }
-  }
-
-    .zigzag-fill-assortment {
-    margin-top: 30px;
-    z-index: 5;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .assortment {
     max-width: none;
     margin: 0 auto;
+    margin-top: -120px;
   }
 
   .assortment__list {
@@ -199,13 +159,16 @@
     width: 525px;
   }
 
-  .zigzag-fill--interior {
-    width: 525px;
-    height: 23px;
+  .assortment__link--interior {
+    height: 124px;
   }
 
-  .zigzag-fill--toy {
-    width: 525px;
-    height: 23px;
+  .assortment__link--toy {
+    height: 134px;
+  }
+
+  .assortment .zigzag-fill {
+    min-width: 1150px;
+    margin-top: -15px;
   }
 }
