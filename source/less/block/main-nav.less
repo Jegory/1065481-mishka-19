@@ -60,10 +60,6 @@
   height: 37px;
 }
 
-// .main-nav__list li::first-child {. //  не скрывать логотип при закрытии меню
-//   display: block;
-// }
-
 .main-nav__list {  //ul
   display: flex;
   flex-direction: column;
@@ -132,7 +128,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--closed .main-nav__item {
+  .main-nav--closed .main-nav__item:not(:first-child) {
     display: none;
 
     &--active {
