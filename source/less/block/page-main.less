@@ -37,7 +37,6 @@
   .page-main__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 768px;
     margin: 0 auto;
   }
 
@@ -65,20 +64,19 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    width: 1150px;
     margin: 0 auto;
   }
 
   .page-main__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: auto;
   }
 
   .page-main__bg-image {
     width: auto;
     margin: 0 auto;
-    background: url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+    background: url("../img/hero-desktop@1x.jpg") no-repeat 50% 0, #f9f9f9;
   }
 
   .page-main__title {
@@ -87,7 +85,7 @@
   }
 
   .zigzag-line {
-    width: 1150px;
+    // width: 1150px;
     margin-top: 73px;
     margin-bottom: 70px;
     height: 23px;

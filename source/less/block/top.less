@@ -200,6 +200,7 @@
 @media (min-width: @desktop-width) {
   .top {
     width: auto;
+    max-width: none;
     margin: 0;
     margin-top: 38px;
   }
@@ -209,7 +210,14 @@
     justify-content: space-between;
     height: 636px;
     width: 1050px;
-    margin: 0 50px;
+    margin: 0 auto;
+    margin-top: -165px;
+  }
+
+  .top__heading {
+    position: relative;
+    width: 1050px;
+    margin: 0 auto;
   }
 
   .top__content {
@@ -218,12 +226,6 @@
 
   .top__text {
     margin-bottom: 65px;
-  }
-
-  .top__heading {
-    position: absolute;
-    width: 1050px;
-    margin: 0 50px;
   }
 
   .top__title {
