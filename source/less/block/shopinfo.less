@@ -2,7 +2,6 @@
   max-width: 320px;
   margin: 0 auto;
   margin-top: 23px;
-  margin-left: -1px;
 }
 
 .shopinfo__wrapper {
@@ -134,24 +133,28 @@
 
 @media (min-width: @desktop-width) {
   .shopinfo {
-    width: auto;
-    margin: 0;
+    // width: 1150px;
+
+    margin: 0 auto;
+    border: 1px solid red;
   }
 
   .shopinfo__wrapper {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .shopinfo__desktop-center{
     display: flex;
     justify-content: center;
-    width: 1050px;
-    margin: 0 50px;
-    padding: 0 100px;
     box-sizing: border-box;
   }
 
   .shopinfo__title {
-    margin-left: 220px;
+    margin-left: 77px;
     font-size: 53px;
     line-height: 1.08;
-    margin-top: -15px;
+    margin-top: -16px;
     margin-bottom: 55px;
   }
 
@@ -164,7 +167,7 @@
     justify-content: space-around;
     margin: 0 auto;
     margin-top: -5px;
-    margin-left: 47px;
+    margin-left: 55px;
   }
 
   .shopinfo__item {
