@@ -183,87 +183,90 @@
 
     <footer class="page-footer">
 
-      <div class="page-footer__logo">
-        <a class="logo-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="logo-footer__icon" width="103" height="34" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon-svg/all-icon.svg#logo-footer"></use>
-          </svg>
-          <span class="visually-hidden">Лого магазина "Мишка"</span>
-        </a>
-      </div>
+      <div class="page-footer__wrapper">
 
-      <div class="page-footer__social social">
-        <ul class="social__list">
+        <div class="page-footer__logo">
+          <a class="logo-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="logo-footer__icon" width="103" height="34" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon-svg/all-icon.svg#logo-footer"></use>
+            </svg>
+            <span class="visually-hidden">Лого магазина "Мишка"</span>
+          </a>
+        </div>
 
-          <li class="social__item">
-            <a class="social__link" href="https://www.instagram.com/htmlacademy">
-              <svg class="social__icon" width="22" height="21" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icon-svg/all-icon.svg#icon-insta"></use>
-              </svg>
-              <span class="visually-hidden">Инстраграм</span>
-            </a>
-          </li>
+        <div class="page-footer__social social">
+          <ul class="social__list">
 
-          <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com/htmlacademy">
-              <svg class="social__icon" width="15" height="28" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icon-svg/all-icon.svg#icon-fb"></use>
-              </svg>
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy">
+                <svg class="social__icon" width="22" height="21" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/icon-svg/all-icon.svg#icon-insta"></use>
+                </svg>
+                <span class="visually-hidden">Инстраграм</span>
+              </a>
+            </li>
 
-          <li class="social__item">
-            <a class="social__link" href="https://twitter.com/htmlacademy_ru">
-              <svg class="social__icon" width="23" height="20" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icon-svg/all-icon.svg#icon-twitter"></use>
-              </svg>
-              <span class="visually-hidden">Твиттер</span>
-            </a>
-          </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__icon" width="15" height="28" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/icon-svg/all-icon.svg#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
 
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <strong class="copyright__text">Разработано</strong>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__icon" width="37" height="44" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon-svg/all-icon.svg#htmlacademy"></use>
-          </svg>
-          <span class="visually-hidden">HTML Academy</span>
-        </a>
-      </div>
-    </footer>
+            <li class="social__item">
+              <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+                <svg class="social__icon" width="23" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/icon-svg/all-icon.svg#icon-twitter"></use>
+                </svg>
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
 
-      <section class="modal">
-        <div class="modal__wrapper">
-          <form class="modal__form basket-form" action="https://echo.htmlacademy.ru" method="post">
-            <h2 class="modal__title">Добавить в корзину</h2>
-            <fieldset class="basket-form__fieldset">
-              <legend class="basket-form__legend">Выберите размер:</legend>
-              <div class="basket-form__size-box">
-                <div class="basket-form__modal-border">
-                  <label class="basket-form__radio">
-                    <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
-                    <span class="basket-form__size">s</span>
-                  </label>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <strong class="copyright__text">Разработано</strong>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__icon" width="37" height="44" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon-svg/all-icon.svg#htmlacademy"></use>
+            </svg>
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
+      </footer>
+
+        <section class="modal">
+          <div class="modal__wrapper">
+            <form class="modal__form basket-form" action="https://echo.htmlacademy.ru" method="post">
+              <h2 class="modal__title">Добавить в корзину</h2>
+              <fieldset class="basket-form__fieldset">
+                <legend class="basket-form__legend">Выберите размер:</legend>
+                <div class="basket-form__size-box">
+                  <div class="basket-form__modal-border">
+                    <label class="basket-form__radio">
+                      <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
+                      <span class="basket-form__size">s</span>
+                    </label>
+                  </div>
+                  <div class="basket-form__modal-border">
+                    <label class="basket-form__radio">
+                      <input class="visually-hidden" type="radio" name="size-product" value="2">
+                      <span class="basket-form__size">m</span>
+                    </label>
+                  </div>
+                  <div class="basket-form__modal-border">
+                    <label class="basket-form__radio">
+                      <input class="visually-hidden" type="radio" name="size-product" value="3">
+                      <span class="basket-form__size">l</span>
+                    </label>
+                  </div>
                 </div>
-                <div class="basket-form__modal-border">
-                  <label class="basket-form__radio">
-                    <input class="visually-hidden" type="radio" name="size-product" value="2">
-                    <span class="basket-form__size">m</span>
-                  </label>
-                </div>
-                <div class="basket-form__modal-border">
-                  <label class="basket-form__radio">
-                    <input class="visually-hidden" type="radio" name="size-product" value="3">
-                    <span class="basket-form__size">l</span>
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <button class="modal__button button">Добавить</button>
-          </form>
+              </fieldset>
+              <button class="modal__button button">Добавить</button>
+            </form>
+          </div>
         </div>
       </section>
 

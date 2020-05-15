@@ -95,7 +95,16 @@
   height: 73px;
   display: flex;
   align-items: center;
-  padding: 0 40px;
+}
+
+.main-nav__item-logo .main-nav__link {
+  width: 100%;
+  padding: 26px 20px 20px 116px;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav--opened .main-nav__link {
+  border-bottom: none;
 }
 
 .main-nav__img { // иконки меню
@@ -181,6 +190,10 @@
     border-top: none;
     padding: 30px 51px 30px 51px;
   }
+
+  .main-nav__item-logo .main-nav__link {
+    padding: 30px 20px 20px 50px;
+}
 
   //---ЛОГО-------------------------
   .main-nav__item-logo {
@@ -313,6 +326,11 @@
   .main-nav__link {
     padding: 35px 45px 35px 45px;
   }
+
+  .main-nav__item-logo .main-nav__link {
+  padding: 33px 0 20px 45px;
+  border-bottom: none;
+}
 
   .main-nav__logo-image-desktop {
     display: block;
