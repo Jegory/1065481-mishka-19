@@ -1,56 +1,79 @@
-
 .shopinfo {
   max-width: 320px;
   margin: 0 auto;
+  margin-top: 23px;
 }
 
 .shopinfo__wrapper {
   margin: 0 30px;
 }
 
-.shopinfo__title {
-  padding: 34px 0 5px 30px;
+.shopinfo__list {  // ul
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.shopinfo__title {
+  margin: 0 0 32px 30px;
   font-size: 25px;
   font-weight: bold;
   line-height: 1.2;
   text-align: left;
 }
 
-.shopinfo__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.shopinfo__item {
-  display: block;
+.shopinfo__item {  //li
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.18;
   text-align: left;
   color: @black;
+  height: 95px;
+  margin-bottom: 28px;
 }
 
-.shopinfo__icon-box {
+.shopinfo__icon-box { // icon box flex
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 60px;
-  height: 80px;
-  margin: 5px 0 0 8px;
 }
 
-.shopinfo__icon {
-  display: block;
+.shopinfo__icon {  // icon svg
   fill: @green-input;
+}
+
+.shopinfo__item-flower .shopinfo__icon {
+  margin: 1px 0 0 8px;
+}
+
+.shopinfo__item-heart .shopinfo__icon {
+  margin: 8px 0 0 8px;
+}
+
+.shopinfo__item-ball .shopinfo__icon {
+  margin: 3px 0 0 4px;
+}
+
+.shopinfo__item-rocket .shopinfo__icon {
+  margin: 4px 0 0 -4px;
+}
+
+.shopinfo__item-gift .shopinfo__icon {
+  margin: 2px 0 0 4px;
+}
+
+.shopinfo__text {
+  width: 254px;
 }
 
 @media (min-width: @tablet-width) {
   .shopinfo {
     max-width: 768px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 56px;
   }
 
   .shopinfo__wrapper {
@@ -63,17 +86,20 @@
     font-weight: bold;
     line-height: 1.16;
     text-align: left;
-    margin-bottom: 30px;
+    margin-top: -8px;
+    margin-left: 44px;
+    margin-bottom: 50px;
   }
 
   .shopinfo__list {
+    width: 665px;
+    height: 470px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    // width: 768px;
     margin: 0 auto;
-    padding-left: 22px;
+    margin-left: 32px;
   }
 
   .shopinfo__item {
@@ -99,31 +125,54 @@
   .shopinfo__item-gift {
     order: 6;
   }
+
+  .shopinfo__text {
+    width: 295px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .shopinfo {
-    width: auto;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .shopinfo__wrapper {
+    margin: 0;
+  }
+
+  .shopinfo__desktop-center {
     display: flex;
     justify-content: center;
-    width: 1050px;
-    margin: 0 50px;
-    padding: 0 100px;
     box-sizing: border-box;
-    border: 1px solid red;
   }
 
   .shopinfo__title {
-    margin-left: 200px;
+    font-size: 53px;
+    line-height: 1.08;
+    margin: -10px 0 55px 30px;
+  }
+
+  .shopinfo__text {
+    margin-left: 4px;
+  }
+
+  .shopinfo__list {
+    width: 700px;
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: -5px;
+    margin-left: 5px;
   }
 
   .shopinfo__item {
     width: 295px;
-    margin-bottom: 30px;
-
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: left;
   }
 }

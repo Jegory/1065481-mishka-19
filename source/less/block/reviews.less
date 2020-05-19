@@ -1,15 +1,17 @@
 .reviews {
-   max-width: 320px;
+  max-width: 320px;
   margin: 0 auto;
+  margin-bottom: 9px;
 }
 
 .reviews__wrapper {
+  display: flex;
   margin: 0 30px;
 }
 
 .reviews__title {
   padding: 0;
-  margin: 60px 0 0 0;
+  margin: 25px 0 10px 0;
   font-size: 25px;
   font-weight: bold;
   line-height: 1.2;
@@ -26,6 +28,11 @@
   color: @grey-dark;
 }
 
+.reviews__bg-image {
+    display: flex;
+    flex-direction: column;
+}
+
 .reviews__list blockquote:nth-child(2),
 .reviews__list blockquote:nth-child(3) {
   display: none;
@@ -36,6 +43,8 @@
   font-weight: bold;
   line-height: 1.41;
   text-align: left;
+  margin-top: 25px;
+  margin-bottom: 5px;
   color: @black;
 }
 
@@ -49,7 +58,7 @@
 .reviews__button-box {
   display: flex;
   justify-content: center;
-  margin: 36px auto;
+  margin: 27px auto;
 }
 
 .button__icon--arrow {
@@ -78,19 +87,20 @@
 
 .reviews__write-link {
   display: flex;
-  width: 256px;
+  width: 260px;
   height: 52px;
+  margin-top: 9px;
   justify-content: center;
   align-items: center;
   border: solid 2px @grey-dark;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1.18;
   text-align: center;
   color: @grey-dark;
   text-transform: uppercase;
   text-decoration: none;
-  margin-bottom: 40px;
+  order: 1;
 
   &:hover {
     color: @white;
@@ -112,8 +122,8 @@
   .reviews {
     display: flex;
     max-width: 768px;
-    margin: 50px auto;
-    border: 1px solid red;
+    margin: 22px auto;
+    margin-bottom: 87px;
   }
 
   .reviews__wrapper {
@@ -122,26 +132,28 @@
     margin-left: 0;
   }
 
-   .reviews__bg-image {
+  .reviews__bg-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: url("../img/review@1x.jpg") no-repeat;
   }
 
   .reviews__title {
     width: 300px;
-    margin: 86px 0 25px 47px;
+    margin: 74px 0 25px 43px;
     font-size: 43px;
     line-height: 1.16;
     text-align: left;
-    border: 1px solid #000;
+    order: -1;
   }
 
   .reviews__list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 668px;
     margin-left: 50px;
-    border: 1px solid red;
   }
 
   .reviews__text {
@@ -149,7 +161,17 @@
     font-size: 17px;
     line-height: 1.76;
     margin-bottom: 60px;
-    border: 1px solid #000;
+    margin-top: 28px;
+  }
+
+  .reviews__author-info {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__pseudo {
+    margin-top: 9px;
   }
 
   .reviews__author {
@@ -160,15 +182,17 @@
 
   .reviews__button-box {
     width: 175px;
-    margin-top: -55px;
-    margin-right: -150px;
-    border: 1px solid #000;
+    display: flex;
+    margin-top: 182px;
+    margin-left: -150px;
   }
 
-   .reviews__write-link {
-    margin: -324px 0 0 0;
+  .reviews__write-link {
+    margin-left: 200px;
+    margin-top: 77px;
     width: 175px;
-    border: 1px solid #000;
+    order: -1;
+    border: 1px solid #000000;
   }
 
   .button__icon--arrow {
@@ -178,7 +202,8 @@
 
   .reviews__button--arrow {
     border: none;
-   background: none;
+    background: none;
+    margin-top: 25px;
   }
 }
 
@@ -188,25 +213,34 @@
     height: 457px;
     max-width: 1150px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: -10px;
   }
 
   .reviews__wrapper {
     display: flex;
     width: 1050px;
     margin: 0 auto;
-    border: 1px solid red;
   }
 
   .reviews__title {
-    margin-left: 124px;
-    margin-top: 80px;
+    margin-left: 170px;
+    margin-top: 70px;
     font-size: 53px;
     line-height: 1.08;
   }
 
   .reviews__text {
-    width: 770px;
+    width: 772px;
+    margin-top: -37px;
+    margin-left: 52px;
+    margin-bottom: 42px;
+  }
+
+  .reviews__author {
+    font-size: 17px;
+    line-height: 1.41;
+    margin-left: 6px;
   }
 
   .reviews__list {
@@ -214,7 +248,17 @@
     width: 770px;
   }
 
+  .reviews__button-box {
+    margin-left: -73px;
+    margin-top: 68px;
+  }
+
   .reviews__write-link {
-    margin-right: -155px;
+    margin-left: 403px;
+  }
+
+  .reviews__author-info {
+    margin-left: 48px;
+    line-height: 1.41;
   }
 }

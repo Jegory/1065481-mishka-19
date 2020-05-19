@@ -1,33 +1,43 @@
 .modal {
   display: none;
-  max-width: 320px;
-  height: 336px;
+  width: 320px;
+  min-height: 336px;
   margin: 0 auto;
+  // position: fixed;
   margin-top: 50px;
-  border: 1px solid red;
+  margin-bottom: 50px;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: solid 1px #c6c6c6;
 }
 
 .modal__wrapper {
   margin: 0 30px;
 }
 
-.modal {
-  border: 1px solid green;
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal__title {
   font-size: 25px;
   font-weight: bold;
   line-height: 1.2;
+  margin: 25px auto 10px;
   text-align: center;
   text-transform: uppercase;
-  color: @grey-dark;
+  color: @black;
 }
 
 .basket-form__legend {
   font-size: 15px;
   line-height: 2;
   text-align: center;
+  margin-bottom: 15px;
+  color: @grey-dark;
 }
 
 .modal__button {
@@ -35,17 +45,71 @@
   height: 52px;
   text-transform: uppercase;
   font-weight: bold;
-  color:@white;
+  color: @white;
   background-color: #63d1bb;
   margin-top: 30px;
 }
 
 fieldset {
-   border:0 none;
+  border: 0 none;
 }
 
 .basket-form__radio {
+  display: flex;
+  text-transform: uppercase;
+  margin: auto;
+  font-weight: bold;
+}
+
+.basket-form__size-box {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+
+.basket-form__modal-border {
+  display: flex;
   width: 82px;
   height: 52px;
-  border: 1px solid @grey-dark;
+  color: @grey-dark;
+  border-color: rgba(239, 239, 239);
+
+  &:hover {
+    border-color: rgba(207, 207, 207);
+  }
+
+  &:active {
+    border-color: #78d8c3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 566px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 1.9;
+    margin: 30px auto 10px;
+  }
+
+  .basket-form__legend {
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
+  .basket-form__size-box {
+    width: 350px;
+  }
+
+  .basket-form__modal-border {
+    width: 112px;
+    height: 52px;
+  }
+
+  .modal__button {
+    width: 350px;
+    margin-top: 20px;
+  }
 }
