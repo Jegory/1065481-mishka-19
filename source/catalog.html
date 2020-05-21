@@ -19,9 +19,13 @@
 
             <li class="main-nav__item main-nav__item-logo">
               <a class="main-nav__link" href="index.html">
-                <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-                <img class="main-nav__logo-image-tablet" src="img/logo-tablet.svg" width="112" height="46" alt="Логотип Мишка">
-                <img class="main-nav__logo-image-desktop" src="img/logo-desktop.svg" width="149" height="72" alt="Логотип Мишка">
+
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img src="img/logo-mobile.svg" alt="Логотип сайта Мишка">
+                </picture>
+
               </a>
             </li>
 
@@ -81,10 +85,15 @@
           <ul class="catalog__list info-catalog">
 
             <li class="info-catalog__item catalog__item-rabbit">
-              <a href="first.html">
-                <img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Зайчик-попрыгайчик">
-                <img class="catalog__item-svg-tablet" src="img/photo-hare-tablet@1x.jpg" width="334" height="334" alt="Фото поделки: Зайчик-попрыгайчик">
-                <img class="catalog__item-svg-desktop" src="img/photo-hare-desktop@1x.jpg" width="316" height="462" alt="Фото поделки: Зайчик-попрыгайчик">
+              <a class="catalog-media" href="first.html">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img class="catalog__item-image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
+                    alt="Зайчик-попрыгайчик">
+                </picture>
               </a>
               <div class="catalog__tablet-box">
                 <a class="catalog__item-name" href="first.html">Зайчик-попрыгайчик</a>
@@ -101,10 +110,14 @@
             </li>
 
             <li class="info-catalog__item catalog__item-linen">
-              <a href="second.html">
-                <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-                <img class="catalog__item-svg-tablet" src="img/photo-bowl-tablet@1x.jpg" width="334" height="334" alt="Фото поделки: Корзинка для белья">
-                <img class="catalog__item-svg-desktop" src="img/photo-bowl-desktop@1x.jpg" width="316" height="462" alt="Фото поделки: Корзинка для белья">
+              <a class="catalog-media" href="second.html">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="catalog__item-image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Фото поделки: Корзинка для белья">
+                </picture>
               </a>
               <div class="catalog__tablet-box">
                 <a class="catalog__item-name" href="second.html">Корзинка для белья</a>
@@ -121,11 +134,18 @@
             </li>
 
             <li class="info-catalog__item catalog__item-toys">
-              <a href="third.html">
-                <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фото поделки: Большая корзинка для игрушек">
-                <img class="catalog__item-svg-tablet" src="img/photo-toys-tablet@1x.jpg" width="334" height="334" alt="Фото поделки: Большая корзинка для игрушек">
-                  <img class="catalog__item-svg-desktop" src="img/photo-toys-desktop@1x.jpg" width="316" height="462" alt="Фото поделки: Большая корзинка для игрушек">
+
+              <a class="catalog-media" href="third.html">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img class="catalog__item-image" src="img/photo-toys-mobile@1x.jpg"
+                    srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Фото поделки: Большая корзинка для игрушек">
+                </picture>
               </a>
+
               <div class="catalog__tablet-box catalog__tablet-box-last">
                 <a class="catalog__item-name" href="third.html">Большая корзинка для игрушек</a>
                 <p class="catalog__item-characteristic">Диаметр 30 см, высота 30 см</p>
