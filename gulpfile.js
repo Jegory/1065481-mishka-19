@@ -44,6 +44,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+
     .pipe(gulp.dest("build"));
 });
 
@@ -92,7 +93,7 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build"(
+gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
@@ -101,5 +102,5 @@ gulp.task("build"(
   ));
 
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "js"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html"));
 gulp.task("start", gulp.series("css", "server"));
