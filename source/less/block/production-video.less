@@ -195,12 +195,14 @@
     width: 225px;
     min-height: 52px;
     margin: 0;
-    margin-top: -8px;
+    margin-top: -70px;
   }
 
   .production-video__dektop-container a {
     width: 230px;
-    margin-top: 46px;
+     margin: 0;
+     margin-top: -20px;
+    // margin: 55px auto;
   }
 
   .production-video__dektop-container {
@@ -223,6 +225,16 @@
   .production-video__camera-icon { // сброс отступов для иконки камеры
     padding: 0;
     margin: 0;
+  }
+
+  .production-video__dektop-container {
+    display: grid;
+    grid-template-columns: 759px 230px;
+  }
+
+  .production-video__image-container {
+    grid-row-start: 1;
+    grid-row-end: 4;
   }
 
   .production__link {
