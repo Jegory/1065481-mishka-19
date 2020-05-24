@@ -183,6 +183,7 @@
               <button class="production-video__play-button" type="button">
                 <svg class="production-video__play-icon" width="101" height="77" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/icon-svg/all-icon.svg#icon-play"></use>
+                </svg>
               </button>
               <img class="production-video__bg-image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="Промо-видео продукции">
               <img class="production-video__bg-tablet" src="img/video-tablet@1x.jpg" width="668" height="455" alt="Промо-видео продукции">
@@ -193,7 +194,7 @@
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
               </p>
 
-            <a class="production__link" href="#">сделать заказ</a>
+            <a class="production-video__link" href="#">сделать заказ</a>
 
           </div>
         </div>
@@ -205,7 +206,7 @@
 
       <div class="page-footer__wrapper">
 
-        <div class="page-footer__logo">
+        <div class="page-footer__logo logo-footer">
           <a class="logo-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="logo-footer__icon" width="103" height="34" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icon-svg/all-icon.svg#logo-footer"></use>
@@ -255,40 +256,40 @@
             <span class="visually-hidden">HTML Academy</span>
           </a>
         </div>
-      </footer>
+      </div>
+    </footer>
 
-        <section class="modal">
-          <div class="modal__wrapper">
-            <form class="modal__form basket-form" action="https://echo.htmlacademy.ru" method="post">
-              <h2 class="modal__title">Добавить в корзину</h2>
-              <fieldset class="basket-form__fieldset">
-                <legend class="basket-form__legend">Выберите размер:</legend>
-                <div class="basket-form__size-box">
-                  <div class="basket-form__modal-border">
-                    <label class="basket-form__radio">
-                      <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
-                      <span class="basket-form__size">s</span>
-                    </label>
-                  </div>
-                  <div class="basket-form__modal-border">
-                    <label class="basket-form__radio">
-                      <input class="visually-hidden" type="radio" name="size-product" value="2">
-                      <span class="basket-form__size">m</span>
-                    </label>
-                  </div>
-                  <div class="basket-form__modal-border">
-                    <label class="basket-form__radio">
-                      <input class="visually-hidden" type="radio" name="size-product" value="3">
-                      <span class="basket-form__size">l</span>
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-              <button class="modal__button button">Добавить</button>
-            </form>
-          </div>
-        </div>
-      </section>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <form class="modal__form basket-form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <fieldset class="basket-form__fieldset">
+            <legend class="basket-form__legend">Выберите размер:</legend>
+            <div class="basket-form__size-box">
+              <div class="basket-form__modal-border">
+                <label class="basket-form__radio">
+                  <input class="visually-hidden" type="radio" name="size-product" value="1" checked>
+                  <span class="basket-form__size">s</span>
+                </label>
+              </div>
+              <div class="basket-form__modal-border">
+                <label class="basket-form__radio">
+                  <input class="visually-hidden" type="radio" name="size-product" value="2">
+                  <span class="basket-form__size">m</span>
+                </label>
+              </div>
+              <div class="basket-form__modal-border">
+                <label class="basket-form__radio">
+                  <input class="visually-hidden" type="radio" name="size-product" value="3">
+                  <span class="basket-form__size">l</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <button class="modal__button button">Добавить</button>
+        </form>
+      </div>
+    </section>
 
     <script src="js/script.js"></script>
 
