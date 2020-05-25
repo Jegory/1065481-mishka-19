@@ -29,8 +29,8 @@
 }
 
 .reviews__bg-image {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__list blockquote:nth-child(2),
@@ -61,27 +61,27 @@
   margin: 27px auto;
 }
 
-.button__icon--arrow {
+.button-arrow__icon {
   display: block;
   margin: 13px 32px;
 }
 
-.reviews__button--arrow {
+.button-arrow__reviews {
   border: 1px solid #ececec;
   background: none;
   width: 50%;
 }
 
-.reviews__button--arrow:first-child {
+.button-arrow__reviews:first-child {
   border-right: 0;
 }
 
-.button--arrow:hover .button__icon--arrow,
-.button--arrow:focus .button__icon--arrow {
+.button--arrow:hover .button-arrow__icon,
+.button--arrow:focus .button-arrow__icon {
   opacity: 0.6;
 }
 
-.button--arrow:active .button__icon--arrow {
+.button--arrow:active .button-arrow__icon {
   opacity: 0.3;
 }
 
@@ -138,7 +138,7 @@
     flex-wrap: wrap;
     background: url("../img/review@1x.jpg") no-repeat;
 
-     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
     }
@@ -200,12 +200,12 @@
     border: 1px solid #000000;
   }
 
-  .button__icon--arrow {
+  .button-arrow__icon {
     display: block;
     margin: 13px auto;
   }
 
-  .reviews__button--arrow {
+  .button-arrow__reviews {
     border: none;
     background: none;
     margin-top: 25px;
