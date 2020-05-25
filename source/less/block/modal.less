@@ -1,15 +1,25 @@
 .modal {
-  display: block;
+  display: none;
   width: 320px;
   min-height: 336px;
   margin: 0 auto;
-  // position: fixed;
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 10;
   background-color: #ffffff;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   border: solid 1px #c6c6c6;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
 }
 
 .modal__wrapper {
@@ -72,7 +82,7 @@ fieldset {
   width: 82px;
   height: 52px;
   color: @grey-dark;
-  border-color: rgba(239, 239, 239);
+  border: 2px solid rgba(239, 239, 239);
 
   &:hover {
     border-color: rgba(207, 207, 207);
@@ -85,8 +95,8 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .modal {
-    width: 568px;
-    min-height: 338px;
+    width: 566px;
+    min-height: 336px;
   }
 
   .modal__title {
@@ -105,14 +115,8 @@ fieldset {
   }
 
   .basket-form__modal-border {
-    border-style: solid;
-    border-width: 2px;
     width: 112px;
     height: 52px;
-  }
-
-  .basket-form__modal-border:active {
-    border-color:#62d1ba
   }
 
   .modal__button {
